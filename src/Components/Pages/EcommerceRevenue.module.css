@@ -1,0 +1,39 @@
+.data_box_1, .data_box_2 {
+    background-color: #fff !important;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin: 0 5px;
+    min-height: 280px;
+}
+
+.download_report_btn {
+    background-color: var(--dark-blue-500) !important;
+    color: #fff !important;
+}
+
+.download_report_btn:hover {
+    background-color: var(--dark-blue-900) !important;
+}
+
+.percent_btn {
+    display: inline-flex;
+    margin-left: 5px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: var(--green-500);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

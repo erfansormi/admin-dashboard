@@ -1,0 +1,23 @@
+.setting_btn {
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px !important;
+    height: 40px !important;
+    position: fixed;
+    bottom: 20px;
+    right: 16px;
+    text-align: center !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
+    background-color: var(--dark-blue-900) !important;
+    z-index: 10;
+}
+
+.menu_icon_btn {
+    width: fit-content !important;
+}
