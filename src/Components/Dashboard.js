@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { Route, Routes } from "react-router-dom"
 
 //components
-import SideBar from './SideBar';
+import SideBar from './SideBar/SideBar';
 import NavbarBtns from './Navbar/NavbarBtns';
 import Ecommerce from "./Pages/Ecommerce"
 import Order from "./Pages/Order"
@@ -20,7 +20,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 
 const Dashboard = () => {
-    const { activeMenu, setActiveMenu, screenSize, setScreenSize } = useContext(MenusContext)
+    const { setActiveMenu, screenSize, setScreenSize } = useContext(MenusContext)
 
     useEffect(() => {
         const resizeHandler = () => setScreenSize(window.innerWidth)
@@ -38,15 +38,7 @@ const Dashboard = () => {
     return (
         <>
             {/* sidebar */}
-            {activeMenu && < SideBar />
-                // :
-                // <div className="col-1">
-                //     <IconButton className={`${styles.menu_icon_btn}`}
-                //         onClick={() => setActiveMenu((prevState) => !prevState)}>
-                //         <MenuIcon />
-                //     </IconButton>
-                // </div>
-            }
+            <SideBar />
 
             {/* navbar btns */}
             <NavbarBtns />
@@ -57,8 +49,7 @@ const Dashboard = () => {
             </button>
 
             {/* center content */}
-            {/* <div className={activeMenu ? `col-9 offset-5` : `col-8 offset-5`}> */}
-            <div className={`container`}>
+            <div className={`container ${styles.container}`}>
                 <Routes>
                     <Route path='/ecommerce' element={<Ecommerce />} />
                     <Route path='/orders' element={<Order />} />

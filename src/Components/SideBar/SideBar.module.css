@@ -1,29 +1,9 @@
 .aside_container {
-    padding: 15px 0 15px 40px !important;
+    padding: 20px 0 20px 15px !important;
     overflow-y: scroll;
     max-height: 100vh !important;
     position: relative;
-    animation-name: menu;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-}
-
-@keyframes menu {
-    from {
-        transform: translateX(-250px);
-        -webkit-transform: translateX(-250px);
-        -moz-transform: translateX(-250px);
-        -ms-transform: translateX(-250px);
-        -o-transform: translateX(-250px);
-    }
-
-    to {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-    }
+    min-width: 270px;
 }
 
 .title_container {

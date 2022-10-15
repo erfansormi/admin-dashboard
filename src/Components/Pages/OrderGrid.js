@@ -30,12 +30,12 @@ export default function BasicTable() {
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead sx={{ border: "1px solid #eee" }}>
                     <TableRow className={styles.table_title_contaner}>
-                        <TableCell>image</TableCell>
-                        <TableCell align="justify">item</TableCell>
-                        <TableCell align="justify">current name</TableCell>
-                        <TableCell align="justify">total ammount</TableCell>
-                        <TableCell align="justify">status</TableCell>
-                        <TableCell align="justify">order ID</TableCell>
+                        <TableCell align="left">image</TableCell>
+                        <TableCell align="center">item</TableCell>
+                        <TableCell align="center">current name</TableCell>
+                        <TableCell align="center">total ammount</TableCell>
+                        <TableCell align="center">status</TableCell>
+                        <TableCell align="center">order ID</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody className={styles.row_container}>
@@ -44,18 +44,18 @@ export default function BasicTable() {
                             key={row.name}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                            <TableCell component="th" scope="row">
+                            <TableCell component="th" scope="row" align='left'>
                                 <img src={row.image} alt="order-pic" className={styles.order_img} />
                             </TableCell>
-                            <TableCell align="justify">
+                            <TableCell align="center">
                                 {row.name}
                             </TableCell>
-                            <TableCell align="justify">{row.currentName}</TableCell>
-                            <TableCell align="justify">${row.ammount}</TableCell>
-                            <TableCell align="justify">
+                            <TableCell align="center">{row.currentName}</TableCell>
+                            <TableCell align="center">${row.ammount}</TableCell>
+                            <TableCell align="center">
                                 <button className="btn" style={{ backgroundColor: row.color, boxShadow: "none", width: 110 }}> {row.status}</button>
                             </TableCell>
-                            <TableCell align="justify">{row.orderid}</TableCell>
+                            <TableCell align="center">{row.orderid}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
