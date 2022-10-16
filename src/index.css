@@ -3,6 +3,13 @@
     --dark-blue-700: rgb(44, 77, 184);
     --dark-blue-900: rgb(18, 58, 190);
     --green-500: rgb(78, 226, 48);
+    --nutral-color-1: #c5c5c5;
+    --success-color: #32ff7e;
+    --warning-color: #fed330;
+    --error-color-1: #ff4757;
+    --error-color-2: #ff3838;
+    --light-shadow: 0 0 5px 2px #ddd;
+    --dark-shadow: 0 0 5px 2px rgb(50, 50, 54);
 }
 
 ::-webkit-scrollbar {
@@ -33,23 +40,46 @@ body {
     background-color: #f5f5f5 !important;
 }
 
-h1, h2, h3, h4, h5, h6, div, p {
+h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
     font-weight: 500;
 }
 
 span {
-    font-size: 14px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
     font-weight: 400;
 }
 
 button {
+    font-weight: 500 !important;
+    background-color: transparent;
     transition: 0.5s background ease-in;
     -webkit-transition: 0.5s background ease-in;
     -moz-transition: 0.5s background ease-in;
     -ms-transition: 0.5s background ease-in;
     -o-transition: 0.5s background ease-in;
+    border: none;
+    text-transform: capitalize !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #js-licensing {
     display: none;
+}
+
+.page-title {
+    box-shadow: var(--light-shadow);
+    border-radius: 6px;
+    padding: 20px;
+    margin: 15px 0 30px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background-color: #fff;
 }

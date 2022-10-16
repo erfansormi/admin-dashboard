@@ -8,8 +8,8 @@ import styles from "./Order.module.css"
 
 const Order = () => {
     return (
-        <div style={{ background: "#fff" }}>
-            <div className={`${styles.title_container}`}>
+        <div>
+            <div className={`page-title`}>
                 <p>page</p>
                 <h3>orders</h3>
             </div>

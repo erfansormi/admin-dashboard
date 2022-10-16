@@ -3,7 +3,7 @@
     overflow-y: scroll;
     max-height: 100vh !important;
     position: relative;
-    min-width: 270px;
+    min-width: 290px;
 }
 
 .title_container {
@@ -49,6 +49,7 @@
 
 .close_menu_btn {
     position: absolute !important;
-    top: 15px;
+    top: 5px;
     right: 5px;
+    color: var(--error-color-2) !important;
 }

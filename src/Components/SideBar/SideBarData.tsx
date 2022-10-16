@@ -15,7 +15,17 @@ import BubbleChartOutlinedIcon from '@mui/icons-material/BubbleChartOutlined';
 import StackedBarChartOutlinedIcon from '@mui/icons-material/StackedBarChartOutlined';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 
-export const sideBarData = [
+interface SideBarData {
+    title: string;
+    id: number;
+    link: {
+        id: number;
+        name: string;
+        icon: JSX.Element;
+    }[];
+}
+
+export const sideBarData: SideBarData[] = [
     {
         title: "dashboard",
         id: 1,

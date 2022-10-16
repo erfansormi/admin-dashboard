@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { Route, Routes } from "react-router-dom"
 
 //components
 import SideBar from './SideBar/SideBar';
 import NavbarBtns from './Navbar/NavbarBtns';
 import Ecommerce from "./Pages/Ecommerce"
-import Order from "./Pages/Order"
+import Order from "./Pages/Order/Order"
 import Employees from "./Pages/Employees"
 
 //css
@@ -20,20 +20,7 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 
 const Dashboard = () => {
-    const { setActiveMenu, screenSize, setScreenSize } = useContext(MenusContext)
-
-    useEffect(() => {
-        const resizeHandler = () => setScreenSize(window.innerWidth)
-        window.addEventListener("resize", resizeHandler)
-        resizeHandler()
-
-        if (screenSize <= 768) {
-            setActiveMenu(false)
-        } else if (screenSize > 768) {
-            setActiveMenu(false)
-        }
-
-    }, [screenSize])
+    const { setActiveMenu, screenSize, setScreenSize } = useContext(MenusContext);
 
     return (
         <>
