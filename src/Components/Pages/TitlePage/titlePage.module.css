@@ -1,0 +1,22 @@
+.container {
+    box-shadow: var(--light-shadow);
+    text-transform: capitalize;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 15px 0 30px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.container>div:first-child {
+    margin-bottom: 25px;
+}
+
+.container>div:first-child span {
+    color: var(--nutral-color-2);
+}

@@ -6,7 +6,7 @@ import SideBar from './SideBar/SideBar';
 import NavbarBtns from './Navbar/NavbarBtns';
 import Ecommerce from "./Pages/Ecommerce/Ecommerce"
 import Order from "./Pages/Order/Order"
-import Employees from "./Pages/Employees"
+import Employees from "./Pages/Employees/Employees"
 
 //css
 import styles from "./Dashboard.module.css"

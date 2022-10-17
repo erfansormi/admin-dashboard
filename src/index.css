@@ -1,6 +1,7 @@
 :root {
     /* mui */
     --nutral-color-1: #c5c5c5;
+    --nutral-color-2: #aaa;
     --success-color: #32ff7e;
     --warning-color: #fed330;
     --error-color-1: #ff4757;
@@ -9,6 +10,7 @@
     /* colors */
     --light-red: #fa9085;
     --orange-500: #ffa502;
+    --icon-color: rgba(0, 0, 0, 0.54);
     --light-cyan: #dff9fb;
     --cyan-500: #48dbfb;
     --dark-blue-500: rgb(69, 97, 189);
@@ -82,16 +84,4 @@ a {
 
 #js-licensing {
     display: none;
-}
-
-.page-title {
-    box-shadow: var(--light-shadow);
-    border-radius: 6px;
-    padding: 20px;
-    margin: 15px 0 30px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-    background-color: #fff;
 }

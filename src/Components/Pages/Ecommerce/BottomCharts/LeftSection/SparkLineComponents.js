@@ -9,7 +9,7 @@ const SparkLineComponents = () => {
             id='sparkline' height='100px' width='80%' valueType='Numeric'
             lineWidth={1.5}
             tooltipSettings={{
-                visible: true, format: '${xval} : ${yval}',
+                visible: true, format: '${xval} :data ${yval}',
             }} dataSource={[
                 { x: 0, xval: '1', yval: 0 },
                 { x: 1, xval: '2', yval: 2 },

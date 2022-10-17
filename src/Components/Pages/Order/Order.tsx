@@ -2,6 +2,7 @@ import React from 'react'
 
 //components
 import OrderGrid from './OrderGrid'
+import TitlePage from '../TitlePage/TitlePage'
 
 //css
 import styles from "./Order.module.css"
@@ -9,10 +10,7 @@ import styles from "./Order.module.css"
 const Order = () => {
     return (
         <div>
-            <div className={`page-title`}>
-                <p>page</p>
-                <h3>orders</h3>
-            </div>
+            <TitlePage title='order' />
             <OrderGrid />
         </div>
     )
