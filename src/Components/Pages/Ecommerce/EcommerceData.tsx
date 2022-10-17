@@ -5,14 +5,14 @@ import StackedBarChartOutlinedIcon from '@mui/icons-material/StackedBarChartOutl
 import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
 
 //colors
-export const lightBlue300 = "#dff9fb"
-export const cyan500 = "#48dbfb"
-export const orange500 = "#ffa502"
+export const lightBlue300 = "var(--light-cyan)"
+export const cyan500 = "var(--cyan-500)"
+export const orange500 = "var(--orange-500)"
 export const white = "#fff"
-export const red200 = "#fa9085"
-export const red500 = "#EA2027"
-export const lightGreen300 = "#d6ffb8"
-export const green300 = "#78e08f"
+export const red200 = "var(--light-red)"
+export const red500 = "var(--error-color-2)"
+export const lightGreen300 = "var(--light-green)"
+export const green300 = "var(--green-300)"
 
 //ecommerce
 export const ecommerce = [
@@ -47,36 +47,5 @@ export const ecommerce = [
         percentOfChange: "-8",
         color: green300,
         background: lightGreen300
-    },
-]
-
-//order
-
-export const orderGrid = [
-    {
-        headerText: "Image",
-        textAlign: "Center",
-        width: "120",
-    },
-    {
-        headerText: "Item",
-        field: "OrderItems",
-        textAlign: "Center",
-        width: "150",
-        editType: "dropdownedit"
-    },
-    {
-        headerText: "CustomerName",
-        field: "Customer Name",
-        textAlign: "Center",
-        width: "150",
-    },
-    {
-        headerText: "Total Amount",
-        field: "TotalAmount",
-        format: "C2",
-        textAlign: "Center",
-        width: "150",
-        editType: "numericedit"
     },
 ]

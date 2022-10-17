@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom"
 //components
 import SideBar from './SideBar/SideBar';
 import NavbarBtns from './Navbar/NavbarBtns';
-import Ecommerce from "./Pages/Ecommerce"
+import Ecommerce from "./Pages/Ecommerce/Ecommerce"
 import Order from "./Pages/Order/Order"
 import Employees from "./Pages/Employees"
 

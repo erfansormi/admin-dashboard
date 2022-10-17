@@ -1,20 +1,21 @@
-import React from 'react'
-
 //data
-import { ecommerce } from "../../Data/PagesData"
+import { ecommerce } from "./EcommerceData"
 
 //css
 import styles from "./Ecommerce.module.css"
 
 //mui
 import IconButton from '@mui/material/IconButton';
+import { Button } from '@mui/material';
 
 //components
-import EcommerceRevenue from './EcommerceRevenue';
+import EcommerceRevenue from './BottomCharts/EcommerceRevenue';
 
 const Ecommerce = () => {
     return (
         <div className={`${styles.container}`}>
+
+            {/* top summary */}
             <div className={`${styles.img_container}`}>
                 <div>
                     <h5>
@@ -25,17 +26,19 @@ const Ecommerce = () => {
                     </span>
                 </div>
                 <div>
-                    <button className='btn'>
+                    <Button>
                         download
-                    </button>
+                    </Button>
                 </div>
             </div>
+
+            {/* middle grid */}
             <div className={`row justify-content-center`}>
                 {ecommerce.map((item, index) =>
                     <div key={index} className={`col-5 col-md-2 ${styles.ecommerce_data_box}`}>
                         <div>
                             <IconButton sx={{ backgroundColor: item.background, color: item.color }}
-                                onMouseOver={(e) => e.target.style.background = item.background}
+                                onMouseOver={(e: any) => e.target.style.background = item.background}
                                 className={`${styles.btn_icon}`} size='large'>
                                 {item.icon}
                             </IconButton>
@@ -53,6 +56,8 @@ const Ecommerce = () => {
                     </div>
                 )}
             </div>
+
+            {/* bottom charts */}
             <div>
                 <EcommerceRevenue />
             </div>

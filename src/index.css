@@ -1,13 +1,24 @@
 :root {
-    --dark-blue-500: rgb(69, 97, 189);
-    --dark-blue-700: rgb(44, 77, 184);
-    --dark-blue-900: rgb(18, 58, 190);
-    --green-500: rgb(78, 226, 48);
+    /* mui */
     --nutral-color-1: #c5c5c5;
     --success-color: #32ff7e;
     --warning-color: #fed330;
     --error-color-1: #ff4757;
     --error-color-2: #ff3838;
+
+    /* colors */
+    --light-red: #fa9085;
+    --orange-500: #ffa502;
+    --light-cyan: #dff9fb;
+    --cyan-500: #48dbfb;
+    --dark-blue-500: rgb(69, 97, 189);
+    --dark-blue-700: rgb(44, 77, 184);
+    --dark-blue-900: rgb(53 77 157);
+    --green-500: rgb(78, 226, 48);
+    --green-300: #78e08f;
+    --light-green: #d6ffb8;
+
+    /* other */
     --light-shadow: 0 0 5px 2px #ddd;
     --dark-shadow: 0 0 5px 2px rgb(50, 50, 54);
 }
@@ -53,6 +64,7 @@ span {
 
 button {
     font-weight: 500 !important;
+    text-transform: capitalize;
     background-color: transparent;
     transition: 0.5s background ease-in;
     -webkit-transition: 0.5s background ease-in;

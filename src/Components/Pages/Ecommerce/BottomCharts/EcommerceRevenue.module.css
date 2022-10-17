@@ -7,8 +7,16 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    margin: 0 5px;
+    margin: 0 8px;
     min-height: 280px;
+}
+
+.data_box_1 {
+    padding: 20px !important;
+}
+
+.data_box_2 {
+    padding: 20px 10px !important;
 }
 
 .download_report_btn {
@@ -31,7 +39,7 @@
     border-radius: 50%;
     font-size: 12px;
     font-weight: 400;
-    background-color: var(--green-500);
+    background-color: var(--green-300);
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
