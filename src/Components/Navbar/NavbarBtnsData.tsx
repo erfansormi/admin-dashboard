@@ -3,7 +3,17 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 
-export const NavbarBtnsData = [
+// ts
+import { KeyInitialValue } from '../../Context/MenusContextProvider';
+
+interface iNavbarBtnsData {
+    icon: JSX.Element;
+    link: KeyInitialValue;
+    id: number;
+}
+
+// data
+export const NavbarBtnsData: iNavbarBtnsData[] = [
     {
         icon: <ShoppingCartOutlinedIcon />,
         link: "cart",

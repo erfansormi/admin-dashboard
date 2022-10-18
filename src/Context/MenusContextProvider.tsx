@@ -1,6 +1,8 @@
 import React, { createContext, useState } from "react";
 
 // ts
+export type KeyInitialValue = "cart" | "chats" | "notification" | "profile"
+
 interface Props {
     children: React.ReactNode;
 }
@@ -17,7 +19,7 @@ interface ContextValues {
     setActiveMenu: React.Dispatch<React.SetStateAction<boolean>>,
     navBtnIsClicked: InitialState,
     setNavBtnIsClicked: React.Dispatch<React.SetStateAction<InitialState>>,
-    clickHandler: (item: keyof InitialState) => void,
+    clickHandler: (item: KeyInitialValue) => void,
 }
 
 //context
@@ -33,7 +35,7 @@ const MenusContextProvider = ({ children }: Props) => {
     const [activeMenu, setActiveMenu] = useState(false);
     const [navBtnIsClicked, setNavBtnIsClicked] = useState(initialState);
 
-    const clickHandler = (item: keyof InitialState) => {
+    const clickHandler = (item: KeyInitialValue) => {
         setNavBtnIsClicked({ ...initialState, [item]: !navBtnIsClicked[item] });
     };
 

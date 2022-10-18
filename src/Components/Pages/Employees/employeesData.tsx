@@ -1,3 +1,12 @@
+import { Avatar } from '@mui/material';
+
+// icons
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
+// css
+import styles from "./employees.module.css"
+
 export const colEmployees = [
     {
         colText: "employee",
@@ -28,7 +37,7 @@ export const rowEmployees = [
         occupation: "sales man",
         reportsTo: "new york",
         country: "France",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVP69yYHdwjs2tSmmu8OgrYGhfVDDwT_0bILAHH4AqF7yuSrmugNzWjpp4Zr6GmDpXfA&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeVP69yYHdwjs2tSmmu8OgrYGhfVDDwT_0bILAHH4AqF7yuSrmugNzWjpp4Zr6GmDpXfA&usqp=CAU"
     },
     {
         id: 10249,
@@ -38,7 +47,7 @@ export const rowEmployees = [
         occupation: "architect",
         reportsTo: "new york",
         country: "Germany",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9soNa4oIdGqd2yMX0YhhoprruZECKETazbcQD0t6zLVKeOSdU_WMHGSw-9HXSxWPxLy8&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9soNa4oIdGqd2yMX0YhhoprruZECKETazbcQD0t6zLVKeOSdU_WMHGSw-9HXSxWPxLy8&usqp=CAU"
     },
     {
         id: 10250,
@@ -48,7 +57,7 @@ export const rowEmployees = [
         occupation: "accountants",
         reportsTo: "new york",
         country: "Brazil",
-        img:"https://spunout.ie/wp-content/uploads/2021/01/portrait-black-young-man-face-man-person-ethnic-student-diversity-diverse-confident-millennial_t20_K6aZOV-2.jpg"
+        img: "https://spunout.ie/wp-content/uploads/2021/01/portrait-black-young-man-face-man-person-ethnic-student-diversity-diverse-confident-millennial_t20_K6aZOV-2.jpg"
     },
     {
         id: 10251,
@@ -58,7 +67,7 @@ export const rowEmployees = [
         occupation: "receptionist",
         reportsTo: "new york",
         country: "France",
-        img:"https://www.fuersie.de/sites/default/files/styles/image360w/public/2022-06/egozentrische-person.jpg?h=fa6d1f7a&itok=da_GdqKf"
+        img: "https://www.fuersie.de/sites/default/files/styles/image360w/public/2022-06/egozentrische-person.jpg?h=fa6d1f7a&itok=da_GdqKf"
     },
     {
         id: 10252,
@@ -68,7 +77,7 @@ export const rowEmployees = [
         occupation: "office manager",
         reportsTo: "new york",
         country: "Belgium",
-        img:"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        img: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
         id: 10253,
@@ -78,7 +87,7 @@ export const rowEmployees = [
         occupation: "sales man",
         reportsTo: "new york",
         country: "Brazil",
-        img:"https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg"
+        img: "https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg"
     },
     {
         id: 10254,
@@ -88,7 +97,7 @@ export const rowEmployees = [
         occupation: "accountants",
         reportsTo: "new york",
         country: "Switzerland",
-        img:"https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
         id: 10255,
@@ -98,7 +107,7 @@ export const rowEmployees = [
         occupation: "receptionist",
         reportsTo: "new york",
         country: "Switzerland",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo1Ruf2u4sizi0ssuKc85KqmylKaaQ38A4B4znY88A3AM2vjf-Hzkq58r5ZsGSXl1YPrI&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo1Ruf2u4sizi0ssuKc85KqmylKaaQ38A4B4znY88A3AM2vjf-Hzkq58r5ZsGSXl1YPrI&usqp=CAU"
     },
     {
         id: 10256,
@@ -108,7 +117,7 @@ export const rowEmployees = [
         occupation: "accountants",
         reportsTo: "new york",
         country: "Brazil",
-        img:"https://cdn.pixabay.com/photo/2021/04/05/12/39/man-6153298_1280.jpg"
+        img: "https://cdn.pixabay.com/photo/2021/04/05/12/39/man-6153298_1280.jpg"
     },
     {
         id: 10257,
@@ -118,7 +127,7 @@ export const rowEmployees = [
         occupation: "sales man",
         reportsTo: "new york",
         country: "Venezuela",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-BRhsApYWRRMYFtZhht7qOGELtkBtlmuhqnhOZvqPURQ2TUemUdwjsi8YJNISZmgrKk&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-BRhsApYWRRMYFtZhht7qOGELtkBtlmuhqnhOZvqPURQ2TUemUdwjsi8YJNISZmgrKk&usqp=CAU"
     },
     {
         id: 10258,
@@ -128,7 +137,7 @@ export const rowEmployees = [
         occupation: "receptionist",
         reportsTo: "new york",
         country: "Austria",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLHzLEwQx65NMYBnJJYTM3SXVnoSxLLVfyFVoZoNyc_xbGURsLGigl6bqn00E8AL8Q0fg&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLHzLEwQx65NMYBnJJYTM3SXVnoSxLLVfyFVoZoNyc_xbGURsLGigl6bqn00E8AL8Q0fg&usqp=CAU"
     },
     {
         id: 10259,
@@ -138,7 +147,7 @@ export const rowEmployees = [
         occupation: "sales man",
         reportsTo: "new york",
         country: "Mexico",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQORhBE_-B7JnAoMdNtLe2kthebd_BkOH1Vw&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQORhBE_-B7JnAoMdNtLe2kthebd_BkOH1Vw&usqp=CAU"
     },
     {
         id: 10260,
@@ -148,7 +157,7 @@ export const rowEmployees = [
         occupation: "architect",
         reportsTo: "new york",
         country: "Germany",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-BRhsApYWRRMYFtZhht7qOGELtkBtlmuhqnhOZvqPURQ2TUemUdwjsi8YJNISZmgrKk&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-BRhsApYWRRMYFtZhht7qOGELtkBtlmuhqnhOZvqPURQ2TUemUdwjsi8YJNISZmgrKk&usqp=CAU"
     },
     {
         id: 10261,
@@ -158,7 +167,7 @@ export const rowEmployees = [
         occupation: "receptionist",
         reportsTo: "new york",
         country: "Brazil",
-        img:"https://cdn.pixabay.com/photo/2021/04/05/12/39/man-6153298_1280.jpg"
+        img: "https://cdn.pixabay.com/photo/2021/04/05/12/39/man-6153298_1280.jpg"
     },
     {
         id: 10262,
@@ -168,6 +177,61 @@ export const rowEmployees = [
         occupation: "receptionist",
         reportsTo: "new york",
         country: "USA",
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-BRhsApYWRRMYFtZhht7qOGELtkBtlmuhqnhOZvqPURQ2TUemUdwjsi8YJNISZmgrKk&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB-BRhsApYWRRMYFtZhht7qOGELtkBtlmuhqnhOZvqPURQ2TUemUdwjsi8YJNISZmgrKk&usqp=CAU"
     },
 ];
+
+// ts
+interface Row {
+    id: number;
+    employeeName: string;
+    hireDate: Date;
+    city: string;
+    occupation: string;
+    reportsTo: string;
+    country: string;
+    img: string;
+}
+
+export const rowEmployeesValues = (row: Row) => {
+    return [
+        {
+            value:
+                <div className={styles.icon_container}>
+                    <Avatar
+                        alt={row.employeeName}
+                        src={row.img}
+                        sx={{ width: 34, height: 34, marginRight: 2 }}
+                    />
+                    {row.employeeName}
+                </div>
+        },
+        {
+            value: row.occupation
+        },
+        {
+            value:
+                <div className={styles.icon_container}>
+                    <span>
+                        <LocationCityIcon />
+                    </span>
+                    {row.city}
+                </div>
+        },
+        {
+            value:
+                <div className={styles.icon_container}>
+                    <span className={styles.country_icon}>
+                        <LocationOnIcon />
+                    </span>
+                    {row.country}
+                </div>
+        },
+        {
+            value: row.hireDate.toLocaleDateString()
+        },
+        {
+            value: row.reportsTo
+        }
+    ]
+}

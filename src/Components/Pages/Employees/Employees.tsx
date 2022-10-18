@@ -8,17 +8,13 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import TitlePage from '../TitlePage/TitlePage';
-import { TextField, Avatar } from '@mui/material';
-
-// icons
-import LocationCityIcon from '@mui/icons-material/LocationCity';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { TextField } from '@mui/material';
 
 // css
 import styles from "./employees.module.css"
 
 // data
-import { rowEmployees, colEmployees } from './employeesData';
+import { rowEmployees, colEmployees, rowEmployeesValues } from './employeesData';
 
 const Employees = () => {
     const [searchValue, setSearchValue] = useState("")
@@ -48,7 +44,7 @@ const Employees = () => {
                                 {colEmployees.map((item, index) => (
                                     <TableCell
                                         key={item.colText}
-                                        align={index == 0 ? "left" : "center"}
+                                        align={"left"}
                                         sx={{ fontWeight: "600", backgroundColor: "var(--light-cyan)" }}
                                     >
                                         {item.colText}
@@ -59,41 +55,16 @@ const Employees = () => {
                         <TableBody>
                             {filteredEmployees.map((row) => (
                                 <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                                    <TableCell align={"left"}>
-                                        <div className={styles.icon_container} style={{ justifyContent: "start" }}>
-                                            <Avatar
-                                                alt={row.employeeName}
-                                                src={row.img}
-                                                sx={{ width: 34, height: 34, marginRight: 2 }}
-                                            />
-                                            {row.employeeName}
-                                        </div>
-                                    </TableCell>
-                                    <TableCell align={"center"}>
-                                        {row.occupation}
-                                    </TableCell>
-                                    <TableCell align={"center"}>
-                                        <div className={styles.icon_container}>
-                                            <span>
-                                                <LocationCityIcon />
-                                            </span>
-                                            {row.city}
-                                        </div>
-                                    </TableCell>
-                                    <TableCell align={"center"}>
-                                        <div className={styles.icon_container}>
-                                            <span className={styles.country_icon}>
-                                                <LocationOnIcon />
-                                            </span>
-                                            {row.country}
-                                        </div>
-                                    </TableCell>
-                                    <TableCell align={"center"}>
-                                        {row.hireDate.toLocaleDateString()}
-                                    </TableCell>
-                                    <TableCell align={"center"}>
-                                        {row.reportsTo}
-                                    </TableCell>
+                                    {
+                                        rowEmployeesValues(row).map((item, index) =>
+                                            <TableCell
+                                                align={"left"}
+                                                key={index * 30}
+                                            >
+                                                {item.value}
+                                            </TableCell>
+                                        )
+                                    }
                                 </TableRow>
                             ))}
                         </TableBody>
