@@ -10,7 +10,7 @@ import styles from "./Order.module.css"
 const Order = () => {
     return (
         <div>
-            <TitlePage title='order' category='page' />
+            <TitlePage title='orders' category='page' />
             <OrderGrid />
         </div>
     )

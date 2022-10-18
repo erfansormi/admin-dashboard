@@ -9,7 +9,7 @@ import { theme } from './Components/Mui/CustomizeColor';
 import MenusContextProvider from './Context/MenusContextProvider';
 
 //components
-import Dashboard from './Components/Dashboard';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 
 const App = () => {

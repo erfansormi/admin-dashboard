@@ -9,7 +9,9 @@ import App from "./App";
 //bootstrap
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+);
 root.render(
     <BrowserRouter>
         <App />
