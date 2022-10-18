@@ -4,14 +4,15 @@ import React from 'react'
 import styles from "./titlePage.module.css"
 
 type Props = {
-    title: string
+    title: string,
+    category: string
 }
 
-const TitlePage = ({ title }: Props) => {
+const TitlePage = ({ title, category }: Props) => {
     return (
         <div className={styles.container}>
             <div>
-                <span>page</span>
+                <span>{category}</span>
             </div>
             <div>
                 <h3>{title}</h3>

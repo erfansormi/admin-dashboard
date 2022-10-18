@@ -26,9 +26,9 @@ const Employees = () => {
 
     return (
         <>
-            <TitlePage title='employees' />
+            <TitlePage title='employees' category="page" />
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                <TableContainer sx={{ maxHeight: 440, textTransform: "capitalize" }}>
+                <TableContainer sx={{ maxHeight: 550, textTransform: "capitalize" }}>
                     <div
                         style={{ backgroundColor: "var(--light-cyan)" }}
                         className={styles.search_container}
