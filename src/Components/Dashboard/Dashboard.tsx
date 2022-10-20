@@ -13,6 +13,7 @@ import NavbarBtns from "../Navbar/NavbarBtns";
 import Ecommerce from "../Pages/Ecommerce/Ecommerce";
 import Order from "../Pages/Order/Order";
 import Employees from "../Pages/Employees/Employees";
+import Customers from "../Pages/Customers/Customers";
 
 const Dashboard = () => {
     return (
@@ -31,6 +32,7 @@ const Dashboard = () => {
             {/* center content */}
             <div className={`container ${styles.container}`}>
                 <Routes>
+                    <Route path='/customers' element={<Customers />} />
                     <Route path="/ecommerce" element={<Ecommerce />} />
                     <Route path="/orders" element={<Order />} />
                     <Route path="/employees" element={<Employees />} />

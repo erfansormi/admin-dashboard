@@ -11,7 +11,6 @@ import MenusContextProvider from './Context/MenusContextProvider';
 //components
 import Dashboard from './Components/Dashboard/Dashboard';
 
-
 const App = () => {
     return (
         <MenusContextProvider>
