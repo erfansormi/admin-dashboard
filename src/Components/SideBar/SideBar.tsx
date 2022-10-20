@@ -51,7 +51,10 @@ const SideBar = () => {
 
                                     {/* {menu links} */}
                                     {item.link.map(item =>
-                                        <Link key={item.id} className={`${styles.link}`}
+                                        <Link
+                                            key={item.id}
+                                            className={`${styles.link} 
+                                            ${window.location.pathname.split("/")[1] === item.name ? styles.active_li : null}`}
                                             to={`/${item.name}`} >
                                             <IconButton aria-label="delete">
                                                 {item.icon}

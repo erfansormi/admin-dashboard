@@ -53,3 +53,18 @@
     right: 5px;
     color: var(--error-color-2) !important;
 }
+
+.active_li {
+    background-color: var(--dark-blue-500);
+    color: #fff;
+    border-radius: 5px 5px 60px 5px;
+}
+
+.active_li * {
+    color: #fff;
+}
+
+.active_li:hover {
+    background-color: var(--dark-blue-900);
+    color: #fff;
+}
