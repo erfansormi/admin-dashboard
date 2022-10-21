@@ -9,6 +9,9 @@ import { NavbarBtnsData } from "../NavbarBtnsData";
 //mui
 import IconButton from "@mui/material/IconButton";
 
+//css
+import styles from "./rightBtns.module.css"
+
 //components
 import Chat from "./Chat";
 import Cart from "./Cart";
@@ -19,21 +22,24 @@ const RightBtns = () => {
     const { navBtnIsClicked, clickHandler } = useContext(MenusContext);
 
     return (
-        <div>
+        <div className="d-flex position-relative">
             {NavbarBtnsData.map((item) => (
-                <IconButton
-                    className="position-relative"
-                    key={item.id}
-                    onClick={() => clickHandler(item.link)}
-                >
-                    {item.icon}
-                </IconButton>
+                <div>
+                    <IconButton
+                        key={item.id}
+                        onClick={() => clickHandler(item.link)}
+                    >
+                        {item.icon}
+                    </IconButton>
+                </div>
             ))}
+            <div className={styles.content_container}>
+                {navBtnIsClicked.chats && <Chat />}
+                {navBtnIsClicked.cart && <Cart />}
+                {navBtnIsClicked.notification && <Notification />}
+                {navBtnIsClicked.profile && <Profile />}
+            </div>
 
-            {navBtnIsClicked.chats && <Chat />}
-            {navBtnIsClicked.cart && <Cart />}
-            {navBtnIsClicked.notification && <Notification />}
-            {navBtnIsClicked.profile && <Profile />}
         </div>
     );
 };

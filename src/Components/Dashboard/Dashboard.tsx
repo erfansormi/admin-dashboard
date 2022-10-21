@@ -14,6 +14,7 @@ import Ecommerce from "../Pages/Ecommerce/Ecommerce";
 import Order from "../Pages/Order/Order";
 import Employees from "../Pages/Employees/Employees";
 import Customers from "../Pages/Customers/Customers";
+import Calendar from "../Pages/Calendar/Calendar";
 
 const Dashboard = () => {
     return (
@@ -32,10 +33,11 @@ const Dashboard = () => {
             {/* center content */}
             <div className={`container ${styles.container}`}>
                 <Routes>
+                    <Route path='/calendar' element={<Calendar />} />
                     <Route path='/customers' element={<Customers />} />
-                    <Route path="/ecommerce" element={<Ecommerce />} />
-                    <Route path="/orders" element={<Order />} />
                     <Route path="/employees" element={<Employees />} />
+                    <Route path="/orders" element={<Order />} />
+                    <Route path="/ecommerce" element={<Ecommerce />} />
                 </Routes>
             </div>
         </>
