@@ -1,6 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+// mui
+import { Container } from "@mui/material";
+
 //icons
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
@@ -15,6 +18,7 @@ import Order from "../Pages/Order/Order";
 import Employees from "../Pages/Employees/Employees";
 import Customers from "../Pages/Customers/Customers";
 import Calendar from "../Pages/Calendar/Calendar";
+import Kanban from "../Pages/Kanban/Kanban";
 
 const Dashboard = () => {
     return (
@@ -31,15 +35,16 @@ const Dashboard = () => {
             </button>
 
             {/* center content */}
-            <div className={`container ${styles.container}`}>
+            <Container maxWidth="lg" className={`${styles.container}`}>
                 <Routes>
+                    <Route path='/kanban' element={<Kanban />} />
                     <Route path='/calendar' element={<Calendar />} />
                     <Route path='/customers' element={<Customers />} />
                     <Route path="/employees" element={<Employees />} />
                     <Route path="/orders" element={<Order />} />
                     <Route path="/ecommerce" element={<Ecommerce />} />
                 </Routes>
-            </div>
+            </Container>
         </>
     );
 };
