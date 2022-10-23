@@ -1,0 +1,20 @@
+.toolbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.editor {
+    min-height: 400px;
+    border: 1px solid #bbb;
+    padding: 20px;
+    cursor: text;
+    background-color: #fff;
+}
+
+.editor:hover{
+    border: 1px solid #777;
+}
+
+.editor div {
+    margin: 0;
+}

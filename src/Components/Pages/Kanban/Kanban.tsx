@@ -6,7 +6,6 @@ import { kanbanData, kanbanGrid } from './KanbanData';
 
 // components
 import TitlePage from '../TitlePage/TitlePage'
-import KanbanColumns from "./KanbanColumns"
 
 const Kanban = () => {
     return (

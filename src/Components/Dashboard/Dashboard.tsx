@@ -19,6 +19,7 @@ import Employees from "../Pages/Employees/Employees";
 import Customers from "../Pages/Customers/Customers";
 import Calendar from "../Pages/Calendar/Calendar";
 import Kanban from "../Pages/Kanban/Kanban";
+import TextEditor from "../Pages/Editor/TextEditor"
 
 const Dashboard = () => {
     return (
@@ -35,15 +36,18 @@ const Dashboard = () => {
             </button>
 
             {/* center content */}
-            <Container maxWidth="lg" className={`${styles.container}`}>
-                <Routes>
-                    <Route path='/kanban' element={<Kanban />} />
-                    <Route path='/calendar' element={<Calendar />} />
-                    <Route path='/customers' element={<Customers />} />
-                    <Route path="/employees" element={<Employees />} />
-                    <Route path="/orders" element={<Order />} />
-                    <Route path="/ecommerce" element={<Ecommerce />} />
-                </Routes>
+            <Container maxWidth="xl" className={`${styles.container}`}>
+                <div style={{ backgroundColor: "var(--light-color-1)", padding: 40 }}>
+                    <Routes>
+                        <Route path='/editor' element={<TextEditor />} />
+                        <Route path='/kanban' element={<Kanban />} />
+                        <Route path='/calendar' element={<Calendar />} />
+                        <Route path='/customers' element={<Customers />} />
+                        <Route path="/employees" element={<Employees />} />
+                        <Route path="/orders" element={<Order />} />
+                        <Route path="/ecommerce" element={<Ecommerce />} />
+                    </Routes>
+                </div>
             </Container>
         </>
     );
