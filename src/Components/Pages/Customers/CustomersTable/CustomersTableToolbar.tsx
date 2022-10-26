@@ -8,12 +8,15 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
 
+import { useSnackbar } from 'notistack';
+
 interface CustomersTableToolbarProps {
     numSelected: number;
 }
 
 function CustomersTableToolbar({ numSelected }: CustomersTableToolbarProps) {
-
+    const { enqueueSnackbar } = useSnackbar();
+    
     return (
         <Toolbar
             sx={{
@@ -49,7 +52,7 @@ function CustomersTableToolbar({ numSelected }: CustomersTableToolbarProps) {
             )}
             {numSelected > 0 ? (
                 <Tooltip
-                    onClick={() => alert("This website not have backend!")}
+                    onClick={() => enqueueSnackbar(`This website not have backend!`, { variant: "error" })}
                     title="Delete">
                     <IconButton>
                         <DeleteIcon />

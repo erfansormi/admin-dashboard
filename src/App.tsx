@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 
+import { SnackbarProvider } from 'notistack';
+
 // mui
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './Components/Mui/CustomizeColor';
@@ -15,10 +17,12 @@ const App = () => {
     return (
         <MenusContextProvider>
             <ThemeProvider theme={theme}>
-                <Routes>
-                    <Route path='/dashboard' element={<Dashboard />} />
-                    <Route path='*' element={<Dashboard />} />
-                </Routes>
+                <SnackbarProvider maxSnack={3}>
+                    <Routes>
+                        <Route path='/dashboard' element={<Dashboard />} />
+                        <Route path='*' element={<Dashboard />} />
+                    </Routes>
+                </SnackbarProvider>
             </ThemeProvider>
         </MenusContextProvider>
     )

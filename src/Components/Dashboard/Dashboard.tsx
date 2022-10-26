@@ -20,6 +20,7 @@ import Customers from "../Pages/Customers/Customers";
 import Calendar from "../Pages/Calendar/Calendar";
 import Kanban from "../Pages/Kanban/Kanban";
 import TextEditor from "../Pages/Editor/TextEditor"
+import ColorPicker from "../Pages/Color-Picker/ColorPicker";
 
 const Dashboard = () => {
     return (
@@ -39,6 +40,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ backgroundColor: "var(--light-color-1)", padding: 40 }}>
                     <Routes>
+                        <Route path='/color-picker' element={<ColorPicker />} />
                         <Route path='/editor' element={<TextEditor />} />
                         <Route path='/kanban' element={<Kanban />} />
                         <Route path='/calendar' element={<Calendar />} />
