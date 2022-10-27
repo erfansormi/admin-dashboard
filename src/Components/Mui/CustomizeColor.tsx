@@ -1,25 +1,39 @@
 import * as React from 'react';
-import Checkbox from '@mui/material/Checkbox';
-import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-import { orange } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles';
 
+export const primaryColor = "rgb(44, 77, 184)";
+export const errorColor = "#ff3838";
+export const warningColor = "#ff9f1a";
+export const neutralColor = "#64748B";
+export const cyanColor = "#48dbfb";
+export const successColor = "#51d36d";
 
 export const theme = createTheme({
     palette: {
         primary: {
-            main: "rgb(44, 77, 184)",
+            main: primaryColor,
             contrastText: '#fff',
         },
         error: {
-            main: "#ff3838",
+            main: errorColor,
             contrastText: '#fff',
         },
         warning: {
-            main: "#ff9f1a",
+            main: warningColor,
             contrastText: '#fff',
         },
         neutral: {
-            main: '#64748B',
+            main: neutralColor,
+            contrastText: '#fff',
+            dark: "#505c6e"
+        },
+        cyan: {
+            main: cyanColor,
+            contrastText: '#fff',
+            dark: "#2eacc7"
+        },
+        success: {
+            main: successColor,
             contrastText: '#fff',
         }
     }
@@ -28,11 +42,13 @@ export const theme = createTheme({
 declare module '@mui/material/styles' {
     interface Palette {
         neutral: Palette['primary'];
+        cyan: Palette['primary'];
     }
 
     // allow configuration using `createTheme`
     interface PaletteOptions {
         neutral?: PaletteOptions['primary'];
+        cyan?: PaletteOptions['primary'];
     }
 }
 
@@ -40,5 +56,6 @@ declare module '@mui/material/styles' {
 declare module '@mui/material/Button' {
     interface ButtonPropsColorOverrides {
         neutral: true;
+        cyan: true;
     }
 }

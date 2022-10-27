@@ -1,11 +1,7 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 // mui
 import { Container } from "@mui/material";
-
-//icons
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 
 //css
 import styles from "./Dashboard.module.css";
@@ -21,6 +17,7 @@ import Calendar from "../Pages/Calendar/Calendar";
 import Kanban from "../Pages/Kanban/Kanban";
 import TextEditor from "../Pages/Editor/TextEditor"
 import ColorPicker from "../Pages/Color-Picker/ColorPicker";
+import Setting from "./Setting";
 
 const Dashboard = () => {
     return (
@@ -32,9 +29,7 @@ const Dashboard = () => {
             <NavbarBtns />
 
             {/* setting */}
-            <button className={`btn btn-lg btn-primary ${styles.setting_btn}`}>
-                <SettingsOutlinedIcon />
-            </button>
+            <Setting />
 
             {/* center content */}
             <Container maxWidth="xl" className={`${styles.container}`}>
@@ -48,6 +43,7 @@ const Dashboard = () => {
                         <Route path="/employees" element={<Employees />} />
                         <Route path="/orders" element={<Order />} />
                         <Route path="/ecommerce" element={<Ecommerce />} />
+                        <Route path="*" element={<Navigate to="/ecommerce" replace />} />
                     </Routes>
                 </div>
             </Container>

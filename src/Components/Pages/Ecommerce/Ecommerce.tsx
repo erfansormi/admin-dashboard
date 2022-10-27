@@ -1,5 +1,10 @@
+import { useContext } from 'react'
+
 //data
 import { ecommerce } from "./EcommerceData"
+
+// context
+import { MenusContext } from "../../../Context/MenusContextProvider";
 
 //css
 import styles from "./Ecommerce.module.css"
@@ -12,6 +17,8 @@ import { Button } from '@mui/material';
 import EcommerceRevenue from './BottomCharts/EcommerceRevenue';
 
 const Ecommerce = () => {
+    const { themeColors } = useContext(MenusContext)
+
     return (
         <div className={`${styles.container}`}>
 
@@ -26,7 +33,7 @@ const Ecommerce = () => {
                     </span>
                 </div>
                 <div>
-                    <Button>
+                    <Button color={themeColors.name} variant={"contained"}>
                         download
                     </Button>
                 </div>

@@ -15,7 +15,7 @@ import { Drawer, Box, IconButton } from '@mui/material';
 import styles from "./SideBar.module.css"
 
 const SideBar = () => {
-    const { activeMenu, setActiveMenu } = useContext(MenusContext)
+    const { activeMenu, setActiveMenu, themeColors } = useContext(MenusContext)
     const handleClose = () => setActiveMenu(false);
 
     const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -55,6 +55,10 @@ const SideBar = () => {
                                             key={item.id}
                                             className={`${styles.link} 
                                             ${window.location.pathname.split("/")[1] === item.name ? styles.active_li : null}`}
+                                            style={{
+                                                backgroundColor: window.location.pathname.split("/")[1] === item.name ?
+                                                    themeColors.hex : undefined
+                                            }}
                                             to={`/${item.name}`} >
                                             <IconButton aria-label="delete">
                                                 {item.icon}

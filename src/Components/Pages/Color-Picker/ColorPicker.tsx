@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ChromePicker, SwatchesPicker } from 'react-color';
-import Button from '@mui/material/Button';
 import { useSnackbar } from 'notistack';
 
 // css
@@ -41,6 +40,9 @@ const ColorPicker = () => {
                     </div>
                     <div className={styles.colors_container}>
                         <div>
+                            <h5 className="mb-3 text-capitalize text-center">
+                                inline pallete
+                            </h5>
                             <SwatchesPicker
                                 width={280}
                                 color={color}
@@ -48,6 +50,9 @@ const ColorPicker = () => {
                             />
                         </div>
                         <div>
+                            <h5 className="mb-3 text-capitalize text-center">
+                                inline picker
+                            </h5>
                             <ChromePicker
                                 color={color}
                                 onChangeComplete={handleChangeComplete}
@@ -60,4 +65,4 @@ const ColorPicker = () => {
     )
 }
 
-export default ColorPicker
+export default ColorPicker;

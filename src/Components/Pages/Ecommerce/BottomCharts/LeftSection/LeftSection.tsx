@@ -1,4 +1,7 @@
-import React from 'react'
+import { useContext } from 'react'
+
+// context
+import { MenusContext } from "../../../../../Context/MenusContextProvider"
 
 // mui
 import { Button } from '@mui/material';
@@ -10,6 +13,8 @@ import styles from "../EcommerceRevenue.module.css"
 import SparkLineComponents from './SparkLineComponents';
 
 const LeftSection = () => {
+    const { themeColors } = useContext(MenusContext);
+
     return (
         <div className={`col-4 ${styles.data_box_1}`}>
             <div className={``}>
@@ -20,7 +25,12 @@ const LeftSection = () => {
             <div className={``}>
                 <div className={`mb-4`}>
                     <h5>${Number(93451).toLocaleString()}
-                        <span className={`${styles.percent_btn}`}>14%</span>
+                        <span
+                            style={{ backgroundColor: themeColors.hex }}
+                            className={`${styles.percent_btn}`}
+                        >
+                            14%
+                        </span>
                     </h5>
                     <span className='text-capitalize' style={{ fontSize: 12, color: "var(--bs-gray-600)" }}>
                         budget
@@ -34,7 +44,10 @@ const LeftSection = () => {
                 </div>
                 <SparkLineComponents />
                 <div className="mt-4">
-                    <Button className={`${styles.download_report_btn}`}>
+                    <Button
+                        color={themeColors.name}
+                        variant={"contained"}
+                    >
                         download report
                     </Button>
                 </div>

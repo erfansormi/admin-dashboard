@@ -12,14 +12,16 @@ import MenusContextProvider from './Context/MenusContextProvider';
 
 //components
 import Dashboard from './Components/Dashboard/Dashboard';
+import GlobalStyles from './Components/Emotion/GlobalStyles';
 
 const App = () => {
     return (
         <MenusContextProvider>
             <ThemeProvider theme={theme}>
                 <SnackbarProvider maxSnack={3}>
+                    <GlobalStyles />
                     <Routes>
-                        <Route path='/dashboard' element={<Dashboard />} />
+                        <Route path='/' element={<Dashboard />} />
                         <Route path='*' element={<Dashboard />} />
                     </Routes>
                 </SnackbarProvider>

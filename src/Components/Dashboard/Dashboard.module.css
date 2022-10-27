@@ -11,7 +11,7 @@
     padding: 0;
     width: 40px !important;
     height: 40px !important;
-    position: fixed;
+    position: fixed !important;
     bottom: 20px;
     right: 16px;
     text-align: center !important;
@@ -19,10 +19,47 @@
     -moz-border-radius: 50% !important;
     -ms-border-radius: 50% !important;
     -o-border-radius: 50% !important;
-    background-color: var(--dark-blue-900) !important;
     z-index: 10;
 }
 
 .menu_icon_btn {
     width: fit-content !important;
+}
+
+.setting_container {
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+
+.setting_container>div {
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.setting_container>div:last-child {
+    border-bottom: 0;
+}
+
+.setting_container .theme_options {
+    display: flex;
+    flex-direction: column;
+}
+
+.setting_container .theme_options>div:first-child {
+    margin-bottom: 11px;
+}
+
+.setting_container div:last-child>div:first-child{
+    margin-bottom: 20px;
+}
+
+.theme_colors {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -ms-border-radius: 50% !important;
+    -o-border-radius: 50% !important;
 }

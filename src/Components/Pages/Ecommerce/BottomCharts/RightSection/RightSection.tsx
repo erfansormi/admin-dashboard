@@ -1,4 +1,7 @@
-import React from 'react'
+import { useContext } from 'react'
+
+// context
+import { MenusContext } from "../../../../../Context/MenusContextProvider"
 
 //css
 import styles from "../EcommerceRevenue.module.css"
@@ -7,11 +10,13 @@ import styles from "../EcommerceRevenue.module.css"
 import ChartComponents from './ChartComponents'
 
 const RightSection = () => {
+    const { themeColors } = useContext(MenusContext);
+
     return (
         <div className={`col-5 ${styles.data_box_2}`}>
-            <div className="d-flex flex-row-reverse">
+            <div className="d-flex flex-row-reverse text-capitalize">
                 <span className="mx-1">expense</span>
-                <span className="mx-1" style={{ color: "var(--green-300)" }}>budget</span>
+                <span className="mx-1" style={{ color: themeColors.hex }}>budget</span>
             </div>
             <ChartComponents />
         </div>

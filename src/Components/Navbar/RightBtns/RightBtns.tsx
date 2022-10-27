@@ -19,7 +19,7 @@ import Notification from "./Notification";
 import Profile from "./Profile";
 
 const RightBtns = () => {
-    const { navBtnIsClicked, clickHandler } = useContext(MenusContext);
+    const { navBtnIsClicked, clickHandler, themeColors } = useContext(MenusContext);
 
     return (
         <div className="d-flex position-relative">
@@ -28,6 +28,7 @@ const RightBtns = () => {
                     <IconButton
                         key={item.id}
                         onClick={() => clickHandler(item.link)}
+                        color={themeColors.name}
                     >
                         {item.icon}
                     </IconButton>

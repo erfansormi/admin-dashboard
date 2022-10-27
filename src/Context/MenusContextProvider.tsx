@@ -1,10 +1,19 @@
 import React, { createContext, useState } from "react";
 
+// data
+import { primaryColor } from "../Components/Mui/CustomizeColor";
+
 // ts
-export type KeyInitialValue = "cart" | "chats" | "notification" | "profile"
+export type KeyInitialValue = "cart" | "chats" | "notification" | "profile";
+export type ThemeColors = "error" | "primary" | "warning" | "neutral" | "success" | "cyan";
 
 interface Props {
     children: React.ReactNode;
+}
+
+interface IThemeColors {
+    name: ThemeColors,
+    hex: string,
 }
 
 interface InitialState {
@@ -20,6 +29,12 @@ interface ContextValues {
     navBtnIsClicked: InitialState,
     setNavBtnIsClicked: React.Dispatch<React.SetStateAction<InitialState>>,
     clickHandler: (item: KeyInitialValue) => void,
+    activeSetting: boolean,
+    setActiveSetting: React.Dispatch<React.SetStateAction<boolean>>,
+    themeMode: "light" | "dark",
+    setThemeMode: React.Dispatch<React.SetStateAction<"light" | "dark">>,
+    themeColors: IThemeColors,
+    setThemeColors: React.Dispatch<React.SetStateAction<IThemeColors>>
 }
 
 //context
@@ -34,6 +49,12 @@ const initialState = {
 const MenusContextProvider = ({ children }: Props) => {
     const [activeMenu, setActiveMenu] = useState(false);
     const [navBtnIsClicked, setNavBtnIsClicked] = useState(initialState);
+    const [activeSetting, setActiveSetting] = useState(false);
+    const [themeMode, setThemeMode] = useState<"light" | "dark">("light");
+    const [themeColors, setThemeColors] = useState<IThemeColors>({
+        name: "primary" as ThemeColors,
+        hex: primaryColor as string
+    })
 
     const clickHandler = (item: KeyInitialValue) => {
         setNavBtnIsClicked({ ...initialState, [item]: !navBtnIsClicked[item] });
@@ -47,6 +68,12 @@ const MenusContextProvider = ({ children }: Props) => {
                 navBtnIsClicked,
                 setNavBtnIsClicked,
                 clickHandler,
+                activeSetting,
+                setActiveSetting,
+                themeMode,
+                setThemeMode,
+                themeColors,
+                setThemeColors
             }}
         >
             {children}
