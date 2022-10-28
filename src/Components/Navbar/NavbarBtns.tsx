@@ -14,12 +14,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import RightBtns from "./RightBtns/RightBtns";
 
 const NavbarBtns = () => {
-    const { setActiveMenu } = useContext(MenusContext);
+    const { setActiveMenu, themeColors } = useContext(MenusContext);
 
     return (
         <nav className={`${styles.navbar} w-100`}>
             <div>
-                <IconButton onClick={() => setActiveMenu((prevState) => !prevState)}>
+                <IconButton color={themeColors.name} onClick={() => setActiveMenu((prevState) => !prevState)}>
                     <MenuIcon />
                 </IconButton>
             </div>

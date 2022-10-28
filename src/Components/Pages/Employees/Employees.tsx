@@ -24,7 +24,7 @@ const Employees = () => {
         <>
             <TitlePage title='employees' category="page" />
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                <TableContainer sx={{ maxHeight: 560, textTransform: "capitalize" }}>
+                <TableContainer className='content-colors' sx={{ maxHeight: 560, textTransform: "capitalize" }}>
                     <div
                         style={{ backgroundColor: "var(--light-cyan)" }}
                         className={styles.search_container}
@@ -52,7 +52,7 @@ const Employees = () => {
                                 ))}
                             </TableRow>
                         </TableHead>
-                        <TableBody>
+                        <TableBody className='content-colors'>
                             {filteredEmployees.map((row) => (
                                 <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                                     {
@@ -60,6 +60,8 @@ const Employees = () => {
                                             <TableCell
                                                 align={"left"}
                                                 key={index * 30}
+                                                className='border-b'
+                                                style={{ color: "inherit" }}
                                             >
                                                 {item.value}
                                             </TableCell>

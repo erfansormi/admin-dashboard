@@ -9,8 +9,8 @@ import { CalendarData } from './CalendarData';
 
 const Schedule = () => {
     return (
-        <div style={{ backgroundColor: "#fff" }}>
-            <Paper sx={{ padding: 3 }}>
+        <div className="content-colors">
+            <Paper sx={{ padding: 3, color: "inherit", backgroundColor: "inherit" }}>
                 <Scheduler
                     view="month"
                     events={CalendarData.map(item => {

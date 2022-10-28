@@ -1,3 +1,8 @@
+import {useContext} from "react";
+
+// context
+import { MenusContext } from "../../../../Context/MenusContextProvider";
+
 import { alpha } from "@mui/material/styles";
 import {
     Toolbar,
@@ -7,7 +12,6 @@ import {
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FilterListIcon from "@mui/icons-material/FilterList";
-
 import { useSnackbar } from 'notistack';
 
 interface CustomersTableToolbarProps {
@@ -16,6 +20,7 @@ interface CustomersTableToolbarProps {
 
 function CustomersTableToolbar({ numSelected }: CustomersTableToolbarProps) {
     const { enqueueSnackbar } = useSnackbar();
+    const {themeColors} = useContext(MenusContext);
     
     return (
         <Toolbar
@@ -54,13 +59,13 @@ function CustomersTableToolbar({ numSelected }: CustomersTableToolbarProps) {
                 <Tooltip
                     onClick={() => enqueueSnackbar(`This website not have backend!`, { variant: "error" })}
                     title="Delete">
-                    <IconButton>
+                    <IconButton color={themeColors.name}>
                         <DeleteIcon />
                     </IconButton>
                 </Tooltip>
             ) : (
                 <Tooltip title="Filter list">
-                    <IconButton>
+                    <IconButton color={themeColors.name}>
                         <FilterListIcon />
                     </IconButton>
                 </Tooltip>

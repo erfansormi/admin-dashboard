@@ -1,3 +1,8 @@
+import { useContext } from "react";
+
+// context
+import { MenusContext } from "../../../../../Context/MenusContextProvider";
+
 import {
     ChartComponent,
     SeriesCollectionDirective,
@@ -9,6 +14,8 @@ import {
 } from "@syncfusion/ej2-react-charts";
 
 const ChartComponents = () => {
+    const { themeColors } = useContext(MenusContext);
+
     const data = [
         { month: "Jan", sales: 135 },
         { month: "Feb", sales: null },
@@ -39,7 +46,7 @@ const ChartComponents = () => {
                     type="Column"
                     yName="sales"
                     name="Sales"
-                    emptyPointSettings={{ mode: "Average", fill: "#48dbfb" }}
+                    emptyPointSettings={{ mode: "Average", fill: themeColors.hex }}
                 />
             </SeriesCollectionDirective>
         </ChartComponent>

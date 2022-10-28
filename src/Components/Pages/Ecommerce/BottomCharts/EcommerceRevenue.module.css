@@ -1,5 +1,4 @@
 .data_box_1, .data_box_2 {
-    background-color: #fff !important;
     border-radius: 8px;
     display: flex;
     flex-direction: column;

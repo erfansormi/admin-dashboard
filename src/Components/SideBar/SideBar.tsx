@@ -38,7 +38,7 @@ const SideBar = () => {
                     role="presentation"
                     onClick={(e) => toggleDrawer(e)}
                     onKeyDown={(e) => toggleDrawer(e)}
-                    className={`shadow ${styles.aside_container}`}
+                    className={`shadow content-colors ${styles.aside_container}`}
                 >
                     <IconButton className={styles.close_menu_btn}>
                         <CancelOutlinedIcon />
@@ -53,14 +53,13 @@ const SideBar = () => {
                                     {item.link.map(item =>
                                         <Link
                                             key={item.id}
-                                            className={`${styles.link} 
-                                            ${window.location.pathname.split("/")[1] === item.name ? styles.active_li : null}`}
+                                            className={`${styles.link} sidebar-link content-colors ${window.location.pathname.split("/")[1] === item.name ? styles.active_li : null}`}
                                             style={{
                                                 backgroundColor: window.location.pathname.split("/")[1] === item.name ?
                                                     themeColors.hex : undefined
                                             }}
                                             to={`/${item.name}`} >
-                                            <IconButton aria-label="delete">
+                                            <IconButton aria-label={item.name}>
                                                 {item.icon}
                                             </IconButton>
                                             <span>

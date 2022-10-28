@@ -23,9 +23,9 @@ const ColorPicker = () => {
     };
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container}`}>
             <TitlePage category='app' title='color picker' />
-            <div className={styles.color_picker_container}>
+            <div className={`shadow content-colors ${styles.color_picker_container}`}>
                 <div className={styles.layout_container}>
                     <div>
                         <div className={styles.pencil}>

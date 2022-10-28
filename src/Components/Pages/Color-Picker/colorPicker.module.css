@@ -1,8 +1,6 @@
 .color_picker_container{
-    background: #fff;
     padding: 60px 0;
     border-radius: 6px;
-    box-shadow: var(--light-shadow);
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;

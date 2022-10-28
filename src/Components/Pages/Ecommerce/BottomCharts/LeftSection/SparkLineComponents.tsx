@@ -8,7 +8,7 @@ import {
 const SparkLineComponents = () => {
     return (
         <SparklineComponent
-            border={{ color: "blue", width: 2 }}
+            border={{ width: 2 }}
             id="sparkline"
             height="100px"
             width="80%"

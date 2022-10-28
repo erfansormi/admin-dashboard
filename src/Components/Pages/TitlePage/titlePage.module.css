@@ -1,5 +1,4 @@
 .container {
-    box-shadow: var(--light-shadow);
     text-transform: capitalize;
     border-radius: 6px;
     padding: 20px;
@@ -8,7 +7,6 @@
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
 }

@@ -30,18 +30,15 @@
     --green-400: #51d36d;
     --green-300: #78e08f;
     --light-green: #d6ffb8;
+    --dark-1: #333;
 
     /* other */
-    --light-shadow: 0 0 5px 2px #ddd;
-    --dark-shadow: 0 0 5px 2px rgb(50, 50, 54);
+    --light-shadow: 0 0 14px #ccc;
+    --dark-shadow: 0 0 14px rgba(0, 0, 0, 20%);
 }
 
 .offcanvas-backdrop {
     display: none;
-}
-
-body {
-    background-color: var(--light-color-1) !important;
 }
 
 button {
@@ -64,6 +61,10 @@ a {
 
 * {
     margin: 0;
+}
+
+th, td {
+    color: inherit !important;
 }
 
 #js-licensing {
@@ -130,4 +131,16 @@ a {
 
 .rdw-emoji-modal, .rdw-colorpicker-modal {
     height: 230px !important;
+}
+
+.MuiTablePagination-root * {
+    color: inherit;
+}
+
+.e-kanban {
+    background: inherit;
+}
+
+.css-mqzbzh>div:first-child *{
+    color:inherit;
 }

@@ -16,13 +16,13 @@ const LeftSection = () => {
     const { themeColors } = useContext(MenusContext);
 
     return (
-        <div className={`col-4 ${styles.data_box_1}`}>
-            <div className={``}>
-                <h6 className='text-capitalize'>
+        <div className={`col-4 text-capitalize content-colors shadow ${styles.data_box_1}`}>
+            <div>
+                <h6>
                     revenue updates
                 </h6>
             </div>
-            <div className={``}>
+            <div>
                 <div className={`mb-4`}>
                     <h5>${Number(93451).toLocaleString()}
                         <span
@@ -32,13 +32,13 @@ const LeftSection = () => {
                             14%
                         </span>
                     </h5>
-                    <span className='text-capitalize' style={{ fontSize: 12, color: "var(--bs-gray-600)" }}>
+                    <span style={{ fontSize: 12, color: "var(--bs-gray-600)" }}>
                         budget
                     </span>
                 </div>
                 <div className={`mb-1`}>
                     <h5>${Number(48485).toLocaleString()}</h5>
-                    <span className='text-capitalize' style={{ fontSize: 12, color: "var(--bs-gray-600)" }}>
+                    <span style={{ fontSize: 12, color: "var(--bs-gray-600)" }}>
                         expense
                     </span>
                 </div>

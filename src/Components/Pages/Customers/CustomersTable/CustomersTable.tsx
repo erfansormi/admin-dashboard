@@ -9,6 +9,9 @@ import {
 // data
 import { Order, Data, rowCustomers } from '../CustomersData';
 
+// css
+import styles from './customersTable.module.css'
+
 // components
 import CustomersTB from './CustomersTB';
 import CustomersTh from './CustomersTh';
@@ -76,8 +79,8 @@ const CustomersTable = () => {
     };
 
     return (
-        <Box sx={{ width: "100%" }}>
-            <Paper sx={{ width: "100%", mb: 2 }}>
+        <Box sx={{ width: "100%" }} className={`${styles.container} content-colors`}>
+            <Paper sx={{ width: "100%", mb: 2, color: 'inherit', backgroundColor: "inherit" }}>
                 <CustomersTableToolbar numSelected={selected.length} />
                 <TableContainer>
                     <Table

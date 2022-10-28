@@ -37,6 +37,8 @@ const CustomersTPagination = ({ page, setPage, rowsPerPage, setRowsPerPage }: Pr
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
+            className="content-colors"
+            sx={{ color: "inherit" }}
         />
     )
 }

@@ -11,7 +11,7 @@ type Props = {
 
 const TitlePage = ({ title, category, style }: Props) => {
     return (
-        <div className={styles.container} style={style}>
+        <div className={`content-colors shadow ${styles.container}`} style={style}>
             <div>
                 <span>{category}</span>
             </div>

@@ -4,17 +4,37 @@
 
 .container .img_container {
     height: 230px;
+    width: 100%;
     padding: 30px;
-    background: no-repeat center center/cover;
-    background-image: url("../../../assets/img/earnings.jpg");
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
+    overflow: hidden;
+}
+
+.container .img_container::before{
+    content: "";
+    background: no-repeat center center/cover;
+    background-image: url("../../../assets/img/earnings.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.container .img_container>div{
+    z-index: 10;
 }
 
 .container .img_container h5 {

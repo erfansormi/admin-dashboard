@@ -33,7 +33,7 @@ const Dashboard = () => {
 
             {/* center content */}
             <Container maxWidth="xl" className={`${styles.container}`}>
-                <div style={{ backgroundColor: "var(--light-color-1)", padding: 40 }}>
+                <div style={{ padding: 40 }}>
                     <Routes>
                         <Route path='/color-picker' element={<ColorPicker />} />
                         <Route path='/editor' element={<TextEditor />} />
@@ -43,7 +43,7 @@ const Dashboard = () => {
                         <Route path="/employees" element={<Employees />} />
                         <Route path="/orders" element={<Order />} />
                         <Route path="/ecommerce" element={<Ecommerce />} />
-                        <Route path="*" element={<Navigate to="/ecommerce" replace />} />
+                        <Route path="/" element={<Navigate to="/ecommerce" replace />} />
                     </Routes>
                 </div>
             </Container>

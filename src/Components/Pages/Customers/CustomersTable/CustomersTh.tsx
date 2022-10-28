@@ -32,7 +32,7 @@ const CustomersTh = ({ onSelectAllClick, order, orderBy, numSelected, rowCount, 
     return (
         <TableHead>
             <TableRow>
-                <TableCell padding="checkbox">
+                <TableCell padding="checkbox" className='border-b'>
                     <Checkbox
                         color="primary"
                         indeterminate={numSelected > 0 && numSelected < rowCount}
@@ -49,6 +49,7 @@ const CustomersTh = ({ onSelectAllClick, order, orderBy, numSelected, rowCount, 
                         align={"left"}
                         padding={headCell.disablePadding ? "none" : "normal"}
                         sortDirection={orderBy === headCell.id ? order : false}
+                        className='border-b'
                     >
                         <TableSortLabel
                             active={orderBy === headCell.id}

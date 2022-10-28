@@ -16,16 +16,16 @@ import { orderRowsData } from './orderGridData';
 
 export default function BasicTable() {
     return (
-        <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                <TableHead sx={{ border: "1px solid #eee" }}>
-                    <TableRow className={styles.table_title_contaner}>
-                        <TableCell align="left">image</TableCell>
-                        <TableCell align="center">item</TableCell>
-                        <TableCell align="center">current name</TableCell>
-                        <TableCell align="center">total ammount</TableCell>
-                        <TableCell align="center">status</TableCell>
-                        <TableCell align="center">order ID</TableCell>
+        <TableContainer sx={{color:"inherit" , backgroundColor:"inherit"}} className='shadow' component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table" className='content-colors'>
+                <TableHead>
+                    <TableRow className={`content-colors-1 ${styles.table_title_contaner}`}>
+                        <TableCell className={"border-b"} align="left">image</TableCell>
+                        <TableCell className={"border-b"} align="center">item</TableCell>
+                        <TableCell className={"border-b"} align="center">current name</TableCell>
+                        <TableCell className={"border-b"} align="center">total ammount</TableCell>
+                        <TableCell className={"border-b"} align="center">status</TableCell>
+                        <TableCell className={"border-b"} align="center">order ID</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody className={styles.row_container}>
@@ -34,15 +34,15 @@ export default function BasicTable() {
                             key={row.name}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
-                            <TableCell component="th" scope="row" align='left'>
+                            <TableCell className={"border-b"} component="th" scope="row" align='left'>
                                 <img src={row.image} alt="order-pic" className={styles.order_img} />
                             </TableCell>
-                            <TableCell align="center">
+                            <TableCell className={"border-b"} align="center">
                                 {row.name}
                             </TableCell>
-                            <TableCell align="center">{row.currentName}</TableCell>
-                            <TableCell align="center">${row.ammount}</TableCell>
-                            <TableCell align="center">
+                            <TableCell className={"border-b"} align="center">{row.currentName}</TableCell>
+                            <TableCell className={"border-b"} align="center">${row.ammount}</TableCell>
+                            <TableCell className={"border-b"} align="center">
                                 <Button
                                     variant="contained"
                                     color={row.color}
@@ -51,7 +51,7 @@ export default function BasicTable() {
                                     {row.status}
                                 </Button>
                             </TableCell>
-                            <TableCell align="center">{row.orderid}</TableCell>
+                            <TableCell className={"border-b"} align="center">{row.orderid}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

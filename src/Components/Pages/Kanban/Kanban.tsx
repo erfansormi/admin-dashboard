@@ -16,7 +16,6 @@ const Kanban = () => {
                 style={{
                     padding: "20px 0 0",
                     borderRadius: 6,
-                    background: "#fff",
                     position: "absolute",
                     left: "30px",
                     right: "30px",

@@ -60,7 +60,7 @@ const Setting = () => {
                 onClose={toggleDrawer(false)}
             >
                 <Box
-                    className={styles.setting_container}
+                    className={`content-colors ${styles.setting_container}`}
                     sx={{ width: 300 }}
                     role="presentation"
                     onKeyDown={toggleDrawer(false)}
@@ -85,8 +85,8 @@ const Setting = () => {
                                     value={themeMode}
                                     onChange={handleChange}
                                 >
-                                    <FormControlLabel value="light" control={<Radio />} label="Light" />
-                                    <FormControlLabel value="dark" control={<Radio />} label="Dark" />
+                                    <FormControlLabel value="light" control={<Radio color={themeColors.name} />} label="Light" />
+                                    <FormControlLabel value="dark" control={<Radio color={themeColors.name} />} label="Dark" />
                                 </RadioGroup>
                             </FormControl>
                         </div>
@@ -105,7 +105,7 @@ const Setting = () => {
                                     variant={"contained"}
                                     sx={{ minWidth: "auto", marginRight: "8px" }}
                                     className={styles.theme_colors}
-                                    onClick={() => 
+                                    onClick={() =>
                                         setThemeColors({
                                             name: item.name as ThemeColors,
                                             hex: item.hex as string,

@@ -36,7 +36,7 @@ export const theme = createTheme({
             main: successColor,
             contrastText: '#fff',
         }
-    }
+    },
 });
 
 declare module '@mui/material/styles' {
@@ -55,6 +55,20 @@ declare module '@mui/material/styles' {
 // Update the Button's color prop options
 declare module '@mui/material/Button' {
     interface ButtonPropsColorOverrides {
+        neutral: true;
+        cyan: true;
+    }
+}
+
+declare module '@mui/material/IconButton' {
+    interface IconButtonPropsColorOverrides {
+        neutral: true;
+        cyan: true;
+    }
+}
+
+declare module '@mui/material/Radio' {
+    interface RadioPropsColorOverrides {
         neutral: true;
         cyan: true;
     }

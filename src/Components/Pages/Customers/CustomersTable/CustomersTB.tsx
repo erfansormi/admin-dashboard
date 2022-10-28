@@ -71,7 +71,7 @@ const CustomersTB = ({
                             selected={isItemSelected}
                             sx={{ textTransform: "capitalize" }}
                         >
-                            <TableCell padding="checkbox">
+                            <TableCell className='border-b' padding="checkbox">
                                 <Checkbox
                                     color="primary"
                                     checked={isItemSelected}
@@ -83,10 +83,10 @@ const CustomersTB = ({
                             {
                                 perRowCustomersT(row).map((item, index) =>
                                     index == 0 ?
-                                        <TableCell component="th" id={labelId} scope="row" padding="none">
+                                        <TableCell className='border-b' component="th" id={labelId} scope="row" padding="none">
                                             {item.value}
                                         </TableCell> :
-                                        <TableCell align="left">
+                                        <TableCell className='border-b' align="left">
                                             {item.value}
                                         </TableCell>
                                 )

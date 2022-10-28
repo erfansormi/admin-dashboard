@@ -23,7 +23,7 @@ const Ecommerce = () => {
         <div className={`${styles.container}`}>
 
             {/* top summary */}
-            <div className={`${styles.img_container}`}>
+            <div className={`${styles.img_container} ecommerce-earning-filter content-colors shadow`}>
                 <div>
                     <h5>
                         earnings
@@ -42,7 +42,7 @@ const Ecommerce = () => {
             {/* middle grid */}
             <div className={`row justify-content-center`}>
                 {ecommerce.map((item, index) =>
-                    <div key={index} className={`col-5 col-md-2 ${styles.ecommerce_data_box}`}>
+                    <div key={index} className={`col-5 col-md-2 content-colors shadow ${styles.ecommerce_data_box}`}>
                         <div>
                             <IconButton sx={{ backgroundColor: item.background, color: item.color }}
                                 onMouseOver={(e: any) => e.target.style.background = item.background}
