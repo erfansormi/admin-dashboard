@@ -14,6 +14,7 @@ import { MenusContext } from "../../Context/MenusContextProvider";
 
 //icons
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import CheckIcon from '@mui/icons-material/Check';
 
 // data
 import { themeColorsData } from "./settingData";
@@ -39,9 +40,21 @@ const Setting = () => {
             setActiveSetting(open);
         };
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleThemeModeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setThemeMode((event.target as HTMLInputElement).value as "light" | "dark");
+        window.localStorage.setItem("theme-mode", JSON.stringify((event.target as HTMLInputElement).value as "light" | "dark"));
     };
+
+    const handleThemeColor = (name: ThemeColors, hex: string) => {
+        setThemeColors({
+            name: name,
+            hex: hex,
+        })
+        window.localStorage.setItem("theme-color", JSON.stringify({
+            name: name,
+            hex: hex
+        }))
+    }
 
     return (
         <>
@@ -61,7 +74,7 @@ const Setting = () => {
             >
                 <Box
                     className={`content-colors ${styles.setting_container}`}
-                    sx={{ width: 300 }}
+                    sx={{ width: 300, height: "100%" }}
                     role="presentation"
                     onKeyDown={toggleDrawer(false)}
                     onClick={toggleDrawer(false)}
@@ -83,7 +96,7 @@ const Setting = () => {
                                     aria-labelledby="demo-controlled-radio-buttons-group"
                                     name="controlled-radio-buttons-group"
                                     value={themeMode}
-                                    onChange={handleChange}
+                                    onChange={handleThemeModeChange}
                                 >
                                     <FormControlLabel value="light" control={<Radio color={themeColors.name} />} label="Light" />
                                     <FormControlLabel value="dark" control={<Radio color={themeColors.name} />} label="Dark" />
@@ -105,13 +118,12 @@ const Setting = () => {
                                     variant={"contained"}
                                     sx={{ minWidth: "auto", marginRight: "8px" }}
                                     className={styles.theme_colors}
-                                    onClick={() =>
-                                        setThemeColors({
-                                            name: item.name as ThemeColors,
-                                            hex: item.hex as string,
-                                        })
-                                    }
+                                    onClick={() => handleThemeColor(item.name as ThemeColors, item.hex)}
                                 >
+                                    {
+                                        themeColors.name === item.name ?
+                                            <CheckIcon /> : null
+                                    }
                                 </Button>
                             )}
                         </div>

@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
+// context
+import { MenusContext } from "../../../Context/MenusContextProvider";
 
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -17,8 +20,15 @@ import styles from "./employees.module.css"
 import { rowEmployees, colEmployees, rowEmployeesValues } from './employeesData';
 
 const Employees = () => {
-    const [searchValue, setSearchValue] = useState("")
-    const filteredEmployees = rowEmployees.filter(item => item.employeeName.includes(searchValue))
+    const { themeColors } = useContext(MenusContext);
+
+    const [searchValue, setSearchValue] = useState("");
+    const filteredEmployees = rowEmployees.filter(item =>
+        item.employeeName.toLowerCase().includes(searchValue.toLowerCase()) ||
+        item.occupation.toLowerCase().includes(searchValue.toLowerCase()) ||
+        item.city.toLowerCase().includes(searchValue.toLowerCase()) ||
+        item.country.toLowerCase().includes(searchValue.toLowerCase())
+    );
 
     return (
         <>
@@ -26,7 +36,7 @@ const Employees = () => {
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer className='content-colors' sx={{ maxHeight: 560, textTransform: "capitalize" }}>
                     <div
-                        style={{ backgroundColor: "var(--light-cyan)" }}
+                        style={{ backgroundColor: themeColors.hex }}
                         className={styles.search_container}
                     >
                         <TextField
@@ -45,7 +55,7 @@ const Employees = () => {
                                     <TableCell
                                         key={item.colText}
                                         align={"left"}
-                                        sx={{ fontWeight: "600", backgroundColor: "var(--light-cyan)" }}
+                                        sx={{ fontWeight: "600", backgroundColor: themeColors.hex, color: "#fff !important" }}
                                     >
                                         {item.colText}
                                     </TableCell>

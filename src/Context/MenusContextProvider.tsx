@@ -47,15 +47,33 @@ const initialState = {
 };
 
 const MenusContextProvider = ({ children }: Props) => {
+    // localStorages
+    const LSThemeColors = window.localStorage.getItem("theme-color");
+    const LSThemeMode = window.localStorage.getItem("theme-mode");
+
+    // states
     const [activeMenu, setActiveMenu] = useState(false);
     const [navBtnIsClicked, setNavBtnIsClicked] = useState(initialState);
     const [activeSetting, setActiveSetting] = useState(false);
-    const [themeMode, setThemeMode] = useState<"light" | "dark">("light");
-    const [themeColors, setThemeColors] = useState<IThemeColors>({
-        name: "primary" as ThemeColors,
-        hex: primaryColor as string
+    const [themeMode, setThemeMode] = useState<"light" | "dark">(()=>{
+        if(typeof LSThemeMode === "string" && JSON.parse(LSThemeMode)){
+            return JSON.parse(LSThemeMode);
+        }
+        else{
+            return "light";
+        }
+    });
+    const [themeColors, setThemeColors] = useState<IThemeColors>(() => {
+        if (typeof LSThemeColors === "string" && JSON.parse(LSThemeColors)) {
+            return JSON.parse(LSThemeColors);
+        }
+        else {
+            return {
+                name: "primary" as ThemeColors,
+                hex: primaryColor as string
+            }
+        }
     })
-
     const clickHandler = (item: KeyInitialValue) => {
         setNavBtnIsClicked({ ...initialState, [item]: !navBtnIsClicked[item] });
     };

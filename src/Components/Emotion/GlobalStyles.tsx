@@ -41,7 +41,7 @@ const GlobalStyles = () => {
                     "#222" : "var(--light-color-1)"};
         }
         
-        .content-colors, .e-card, .rdw-editor-main, .rdw-editor-toolbar, .MuiPaper-root{
+        .content-colors, .e-card, .rdw-editor-main, .rdw-editor-toolbar{
             background-color:${themeMode === "dark" ?
                     "#333" : "#fff"};
             color:${themeMode === "dark" ?
