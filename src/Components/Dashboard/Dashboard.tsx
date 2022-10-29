@@ -7,6 +7,7 @@ import { Container } from "@mui/material";
 import styles from "./Dashboard.module.css";
 
 //components
+import Setting from "./Setting";
 import SideBar from "../SideBar/SideBar";
 import NavbarBtns from "../Navbar/NavbarBtns";
 import Ecommerce from "../Pages/Ecommerce/Ecommerce";
@@ -17,7 +18,7 @@ import Calendar from "../Pages/Calendar/Calendar";
 import Kanban from "../Pages/Kanban/Kanban";
 import TextEditor from "../Pages/Editor/TextEditor"
 import ColorPicker from "../Pages/Color-Picker/ColorPicker";
-import Setting from "./Setting";
+import Line from "../Pages/Line/Line";
 
 const Dashboard = () => {
     return (
@@ -35,6 +36,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ padding: 40 }}>
                     <Routes>
+                        <Route path='/line' element={<Line />} />
                         <Route path='/color-picker' element={<ColorPicker />} />
                         <Route path='/editor' element={<TextEditor />} />
                         <Route path='/kanban' element={<Kanban />} />

@@ -45,7 +45,8 @@ const GlobalStyles = () => {
             background-color:${themeMode === "dark" ?
                     "#333" : "#fff"};
             color:${themeMode === "dark" ?
-                    "#f5f5f5" : "#111"};    
+                    "#f5f5f5" : "#111"};
+            border-radius:6px;
         }
 
         .e-card div{
