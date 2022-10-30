@@ -30,12 +30,6 @@ const GlobalStyles = () => {
             stroke:${themeColors.hex};
         }
 
-        #chartsSeriesGroup0>path{
-            /* fill:${themeColors.hex}; */
-            fill:${themeMode === "dark" ?
-                    "#5f6c8f" : "#555"};
-        }
-
         body {
             background-color: ${themeMode === "dark" ?
                     "#222" : "var(--light-color-1)"};
