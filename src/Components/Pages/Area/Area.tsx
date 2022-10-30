@@ -8,18 +8,18 @@ import TitlePage from '../TitlePage/TitlePage'
 
 import {
     ChartComponent, SeriesCollectionDirective, SeriesDirective,
-    Inject, LineSeries, DateTime, Legend, Tooltip
+    Inject, SplineAreaSeries, DateTime, Legend, Tooltip
 } from '@syncfusion/ej2-react-charts'
 
 // data
-import { lineCustomSeries } from './LineData'
+import { areaCustomSeries } from './AreaData'
 
-const Line = () => {
+const Area = () => {
     const { themeMode } = useContext(MenusContext);
 
     return (
         <div>
-            <TitlePage title='inflation rate' category='chart' />
+            <TitlePage title='inflation rate in percentage' category='chart' />
             <div className="shadow content-colors justify-center content-padding">
                 <ChartComponent
                     height="500px"
@@ -34,16 +34,16 @@ const Line = () => {
                         labelStyle: { color: themeMode === "light" ? "#111" : "#fff" }
                     }}
                     primaryYAxis={{
-                        labelFormat: '{value}%', minimum: 0, maximum: 100,
-                        interval: 20,
+                        labelFormat: '{value}%', minimum: 0, maximum: 4,
+                        interval: 1,
                         majorGridLines: { color: themeMode === "light" ? "#ccc" : "#666" },
                         labelStyle: { color: themeMode === "light" ? "#111" : "#fff" }
                     }}
                     legendSettings={{ textStyle: { color: themeMode === "light" ? "#111" : "#fff" } }}
                 >
-                    <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
+                    <Inject services={[SplineAreaSeries, DateTime, Legend, Tooltip]} />
                     <SeriesCollectionDirective>
-                        {lineCustomSeries.map((item, index) =>
+                        {areaCustomSeries.map((item, index) =>
                             <SeriesDirective key={index * 33} {...item} summaryFillColor="#fff" />
                         )}
                     </SeriesCollectionDirective>
@@ -53,4 +53,4 @@ const Line = () => {
     )
 }
 
-export default Line
+export default Area;

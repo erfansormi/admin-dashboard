@@ -19,6 +19,7 @@ import Kanban from "../Pages/Kanban/Kanban";
 import TextEditor from "../Pages/Editor/TextEditor"
 import ColorPicker from "../Pages/Color-Picker/ColorPicker";
 import Line from "../Pages/Line/Line";
+import Area from "../Pages/Area/Area";
 
 const Dashboard = () => {
     return (
@@ -36,6 +37,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ padding: 40 }}>
                     <Routes>
+                        <Route path='/area' element={<Area />} />
                         <Route path='/line' element={<Line />} />
                         <Route path='/color-picker' element={<ColorPicker />} />
                         <Route path='/editor' element={<TextEditor />} />

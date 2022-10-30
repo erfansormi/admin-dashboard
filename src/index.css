@@ -35,6 +35,7 @@
     /* other */
     --light-shadow: 0 0 14px #ccc;
     --dark-shadow: 0 0 14px rgba(0, 0, 0, 20%);
+    --content-padding: 60px 0;
 }
 
 .offcanvas-backdrop {
@@ -103,6 +104,26 @@ th, td {
     background-color: var(--error-color-2);
 }
 
+.content-padding {
+    padding: var(--content-padding);
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .rdw-option-wrapper {
     padding: 8px !important;
     border-radius: 4px !important;
@@ -141,6 +162,6 @@ th, td {
     background: inherit;
 }
 
-.css-mqzbzh>div:first-child *{
-    color:inherit;
+.css-mqzbzh>div:first-child * {
+    color: inherit;
 }
