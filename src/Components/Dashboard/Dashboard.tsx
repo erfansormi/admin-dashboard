@@ -20,6 +20,7 @@ import TextEditor from "../Pages/Editor/TextEditor"
 import ColorPicker from "../Pages/Color-Picker/ColorPicker";
 import Line from "../Pages/Line/Line";
 import Area from "../Pages/Area/Area";
+import Bar from "../Pages/Bar/Bar";
 
 const Dashboard = () => {
     return (
@@ -37,6 +38,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ padding: 40 }}>
                     <Routes>
+                        <Route path='/bar' element={<Bar />} />
                         <Route path='/area' element={<Area />} />
                         <Route path='/line' element={<Line />} />
                         <Route path='/color-picker' element={<ColorPicker />} />

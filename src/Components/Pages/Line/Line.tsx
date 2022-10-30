@@ -39,7 +39,7 @@ const Line = () => {
                         majorGridLines: { color: themeMode === "light" ? "#ccc" : "#666" },
                         labelStyle: { color: themeMode === "light" ? "#111" : "#fff" }
                     }}
-                    legendSettings={{ textStyle: { color: themeMode === "light" ? "#111" : "#fff" } }}
+                    legendSettings={{ background: 'white' }}
                 >
                     <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
                     <SeriesCollectionDirective>

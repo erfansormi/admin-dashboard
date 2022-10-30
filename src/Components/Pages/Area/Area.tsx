@@ -22,7 +22,7 @@ const Area = () => {
             <TitlePage title='inflation rate in percentage' category='chart' />
             <div className="shadow content-colors justify-center content-padding">
                 <ChartComponent
-                    height="500px"
+                    height="450px"
                     className='justify-center w-100'
                     style={{ maxWidth: 850 }}
                     tooltip={{ enable: true }}
@@ -39,7 +39,7 @@ const Area = () => {
                         majorGridLines: { color: themeMode === "light" ? "#ccc" : "#666" },
                         labelStyle: { color: themeMode === "light" ? "#111" : "#fff" }
                     }}
-                    legendSettings={{ textStyle: { color: themeMode === "light" ? "#111" : "#fff" } }}
+                    legendSettings={{ background: 'white' }}
                 >
                     <Inject services={[SplineAreaSeries, DateTime, Legend, Tooltip]} />
                     <SeriesCollectionDirective>
