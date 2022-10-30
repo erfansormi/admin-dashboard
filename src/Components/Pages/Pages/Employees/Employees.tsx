@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 
 // context
-import { MenusContext } from "../../../Context/MenusContextProvider";
+import { MenusContext } from "../../../../Context/MenusContextProvider";
 
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -10,7 +10,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import TitlePage from '../TitlePage/TitlePage';
+import TitlePage from '../../TitlePage/TitlePage';
 import { TextField } from '@mui/material';
 
 // css

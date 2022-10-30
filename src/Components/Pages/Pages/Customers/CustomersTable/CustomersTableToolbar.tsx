@@ -1,7 +1,7 @@
-import {useContext} from "react";
+import { useContext } from "react";
 
 // context
-import { MenusContext } from "../../../../Context/MenusContextProvider";
+import { MenusContext } from "../../../../../Context/MenusContextProvider";
 
 import { alpha } from "@mui/material/styles";
 import {
@@ -20,8 +20,8 @@ interface CustomersTableToolbarProps {
 
 function CustomersTableToolbar({ numSelected }: CustomersTableToolbarProps) {
     const { enqueueSnackbar } = useSnackbar();
-    const {themeColors} = useContext(MenusContext);
-    
+    const { themeColors } = useContext(MenusContext);
+
     return (
         <Toolbar
             sx={{

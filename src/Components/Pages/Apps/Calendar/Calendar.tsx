@@ -1,5 +1,5 @@
 import React from 'react'
-import TitlePage from '../TitlePage/TitlePage'
+import TitlePage from '../../TitlePage/TitlePage'
 import Schedule from './Schedule'
 
 const Calendar = () => {

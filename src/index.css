@@ -109,17 +109,17 @@ th, td {
 }
 
 .align-center {
-    display: flex;
+    display: flex !important;
     align-items: center;
 }
 
 .justify-center {
-    display: flex;
+    display: flex !important;
     justify-content: center;
 }
 
 .center {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
 }

@@ -1,30 +1,30 @@
 import { useContext } from 'react'
 
 // context
-import { MenusContext } from '../../../Context/MenusContextProvider'
+import { MenusContext } from '../../../../Context/MenusContextProvider'
 
 // components
-import TitlePage from '../TitlePage/TitlePage'
+import TitlePage from '../../TitlePage/TitlePage'
 
 import {
     ChartComponent, SeriesCollectionDirective, SeriesDirective,
-    Inject, SplineAreaSeries, DateTime, Legend, Tooltip
+    Inject, LineSeries, DateTime, Legend, Tooltip
 } from '@syncfusion/ej2-react-charts'
 
 // data
-import { areaCustomSeries } from './AreaData'
+import { lineCustomSeries } from './LineData'
 
-const Area = () => {
+const Line = () => {
     const { themeMode } = useContext(MenusContext);
 
     return (
         <div>
-            <TitlePage title='inflation rate in percentage' category='chart' />
+            <TitlePage title='inflation rate' category='chart' />
             <div className="shadow content-colors justify-center content-padding">
                 <ChartComponent
-                    height="450px"
+                    height="500px"
                     className='justify-center w-100'
-                    style={{ maxWidth: 850 }}
+                    style={{ maxWidth: 1050 }}
                     tooltip={{ enable: true }}
                     primaryXAxis={{
                         valueType: 'DateTime', intervalType: 'Years', lineStyle: { width: 0 },
@@ -34,16 +34,16 @@ const Area = () => {
                         labelStyle: { color: themeMode === "light" ? "#111" : "#fff" }
                     }}
                     primaryYAxis={{
-                        labelFormat: '{value}%', minimum: 0, maximum: 4,
-                        interval: 1,
+                        labelFormat: '{value}%', minimum: 0, maximum: 100,
+                        interval: 20,
                         majorGridLines: { color: themeMode === "light" ? "#ccc" : "#666" },
                         labelStyle: { color: themeMode === "light" ? "#111" : "#fff" }
                     }}
-                    legendSettings={{ background: 'white' }}
+                    legendSettings={{ background: 'white', margin: { top: 15 } }}
                 >
-                    <Inject services={[SplineAreaSeries, DateTime, Legend, Tooltip]} />
+                    <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
                     <SeriesCollectionDirective>
-                        {areaCustomSeries.map((item, index) =>
+                        {lineCustomSeries.map((item, index) =>
                             <SeriesDirective key={index * 33} {...item} summaryFillColor="#fff" />
                         )}
                     </SeriesCollectionDirective>
@@ -53,4 +53,4 @@ const Area = () => {
     )
 }
 
-export default Area;
+export default Line

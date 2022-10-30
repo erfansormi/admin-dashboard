@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { convertFromRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
-import "../../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
+import "../../../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css"
 
 //css
 import styles from "./textEditor.module.css"
 
 // components
-import TitlePage from '../TitlePage/TitlePage';
+import TitlePage from '../../TitlePage/TitlePage';
 
 const content = { "entityMap": {}, "blocks": [{ "key": "637gr", "text": "Initialized from content state.", "type": "unstyled", "depth": 0, "inlineStyleRanges": [], "entityRanges": [], "data": {} }] };
 

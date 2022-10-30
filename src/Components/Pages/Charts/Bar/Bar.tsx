@@ -1,18 +1,19 @@
 import React from 'react';
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries, DataLabel } from '@syncfusion/ej2-react-charts';
 
+// data
 import { barCustomSeries } from './BarData';
-import TitlePage from '../TitlePage/TitlePage';
-import { MenusContext } from '../../../Context/MenusContextProvider';
+
+// components
+import TitlePage from '../../TitlePage/TitlePage';
 
 const Bar = () => {
-    const { themeMode } = React.useContext(MenusContext);
-
     return (
         <div>
             <TitlePage category="chart" title="bar" />
-            <div className="shadow content-colors content-padding">
+            <div className="shadow content-colors content-padding justify-center">
                 <ChartComponent
+                    className='justify-center w-100'
                     id="charts"
                     primaryXAxis={{
                         valueType: 'Category',
@@ -27,8 +28,9 @@ const Bar = () => {
                     }}
                     chartArea={{ border: { width: 0 } }}
                     tooltip={{ enable: true }}
-                    legendSettings={{ background: 'white', position:"Top" }}
+                    legendSettings={{ background: 'white', position: "Top" }}
                     height='450px'
+                    style={{ maxWidth: 1050 }}
                 >
                     <Inject services={[ColumnSeries, Legend, Tooltip, Category, DataLabel]} />
                     <SeriesCollectionDirective>

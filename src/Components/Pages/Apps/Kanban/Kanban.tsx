@@ -5,7 +5,7 @@ import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/
 import { kanbanData, kanbanGrid } from './KanbanData';
 
 // components
-import TitlePage from '../TitlePage/TitlePage'
+import TitlePage from '../../TitlePage/TitlePage'
 
 const Kanban = () => {
     return (

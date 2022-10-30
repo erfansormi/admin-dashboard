@@ -6,10 +6,10 @@ import { useSnackbar } from 'notistack';
 import styles from "./colorPicker.module.css"
 
 // images
-import pencil from "../../../assets/img/pencil.png"
+import pencil from "../../../../assets/img/pencil.png"
 
 // components
-import TitlePage from '../TitlePage/TitlePage'
+import TitlePage from '../../TitlePage/TitlePage'
 
 const ColorPicker = () => {
     const [color, setColor] = useState("#fff176")

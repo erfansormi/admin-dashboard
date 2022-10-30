@@ -11,16 +11,16 @@ import Setting from "./Setting";
 import SideBar from "../SideBar/SideBar";
 import NavbarBtns from "../Navbar/NavbarBtns";
 import Ecommerce from "../Pages/Ecommerce/Ecommerce";
-import Order from "../Pages/Order/Order";
-import Employees from "../Pages/Employees/Employees";
-import Customers from "../Pages/Customers/Customers";
-import Calendar from "../Pages/Calendar/Calendar";
-import Kanban from "../Pages/Kanban/Kanban";
-import TextEditor from "../Pages/Editor/TextEditor"
-import ColorPicker from "../Pages/Color-Picker/ColorPicker";
-import Line from "../Pages/Line/Line";
-import Area from "../Pages/Area/Area";
-import Bar from "../Pages/Bar/Bar";
+import Order from "../Pages/Pages/Order/Order";
+import Employees from "../Pages/Pages/Employees/Employees";
+import Customers from "../Pages/Pages/Customers/Customers";
+import Calendar from "../Pages/Apps/Calendar/Calendar";
+import Kanban from "../Pages/Apps/Kanban/Kanban";
+import TextEditor from "../Pages/Apps/Editor/TextEditor"
+import ColorPicker from "../Pages/Apps/Color-Picker/ColorPicker";
+import Line from "../Pages/Charts/Line/Line";
+import Area from "../Pages/Charts/Area/Area";
+import Bar from "../Pages/Charts/Bar/Bar";
 
 const Dashboard = () => {
     return (
