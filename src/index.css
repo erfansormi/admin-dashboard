@@ -136,6 +136,12 @@ th, td {
     cursor: pointer;
 }
 
+.triple-dot{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .rdw-option-wrapper {
     padding: 8px !important;
     border-radius: 4px !important;

@@ -28,7 +28,7 @@ const Notification = () => {
                 {item.title}
               </h5>
             </div>
-            <div className='neutral-color'>
+            <div className='neutral-color' style={{ fontSize: "0.9 rem" }}>
               {item.des}
             </div>
           </div>
