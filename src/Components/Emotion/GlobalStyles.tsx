@@ -56,6 +56,10 @@ const GlobalStyles = () => {
                     "#444" : "#eee"} !important;
         }
 
+        .neutral-color{
+            color:var(--neutral);
+        }
+
         .e-toggle-header div{
             color:${themeMode === "dark" ?
                     "#fff" : "#000"} !important;    
@@ -79,6 +83,14 @@ const GlobalStyles = () => {
         .border-b{
             border-bottom: ${themeMode === "light" ?
                     "1px solid #ddd" : "1px solid #444"} !important;
+        }
+
+        .border-b:last-child{
+            border-bottom:none !important;
+        }
+
+        .hover-list:hover{
+            background-color:${themeMode==="light"?"var(--light-hover-list)":"var(--dark-hover-list)"}
         }
 
         .rs__cell,.css-cb7tj6:first-of-type, .rdw-editor-toolbar, .rdw-editor-main{

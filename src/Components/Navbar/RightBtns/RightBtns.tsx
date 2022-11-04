@@ -12,19 +12,13 @@ import IconButton from "@mui/material/IconButton";
 //css
 import styles from "./rightBtns.module.css"
 
-//components
-import Chat from "./Chat";
-import Cart from "./Cart";
-import Notification from "./Notification";
-import Profile from "./Profile";
-
 const RightBtns = () => {
     const { navBtnIsClicked, clickHandler, themeColors } = useContext(MenusContext);
 
     return (
-        <div className="d-flex position-relative">
-            {NavbarBtnsData.map((item) => (
-                <div>
+        <div className="d-flex">
+            {NavbarBtnsData.map((item) =>
+                <div className="position-relative">
                     <IconButton
                         key={item.id}
                         onClick={() => clickHandler(item.link)}
@@ -32,14 +26,14 @@ const RightBtns = () => {
                     >
                         {item.icon}
                     </IconButton>
+                    {
+                        navBtnIsClicked[item.link] ?
+                            <div className={styles.content_container}>
+                                {item.component}
+                            </div> : null
+                    }
                 </div>
-            ))}
-            <div className={styles.content_container}>
-                {navBtnIsClicked.chats && <Chat />}
-                {navBtnIsClicked.cart && <Cart />}
-                {navBtnIsClicked.notification && <Notification />}
-                {navBtnIsClicked.profile && <Profile />}
-            </div>
+            )}
 
         </div>
     );

@@ -15,8 +15,11 @@
     --warning-color: #fed330;
     --error-color-1: #ff4757;
     --error-color-2: #ff3838;
-
+    
     /* colors */
+    --neutral:#999;
+    --light-hover-list:#f6f6f6;
+    --dark-hover-list:#393939;
     --light-color-1: #f5f5f5;
     --light-red: #fa9085;
     --orange-500: #ffa502;
@@ -116,6 +119,11 @@ th, td {
 .justify-center {
     display: flex !important;
     justify-content: center;
+}
+
+.justify-between {
+    display: flex !important;
+    justify-content: space-between;
 }
 
 .center {

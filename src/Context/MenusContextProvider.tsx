@@ -34,12 +34,13 @@ interface ContextValues {
     themeMode: "light" | "dark",
     setThemeMode: React.Dispatch<React.SetStateAction<"light" | "dark">>,
     themeColors: IThemeColors,
-    setThemeColors: React.Dispatch<React.SetStateAction<IThemeColors>>
+    setThemeColors: React.Dispatch<React.SetStateAction<IThemeColors>>,
+    handleCloseNavBtns: () => void,
 }
 
 //context
 export const MenusContext = createContext({} as ContextValues);
-const initialState = {
+const initialNavBtns = {
     cart: false,
     chats: false,
     notification: false,
@@ -53,13 +54,13 @@ const MenusContextProvider = ({ children }: Props) => {
 
     // states
     const [activeMenu, setActiveMenu] = useState(false);
-    const [navBtnIsClicked, setNavBtnIsClicked] = useState(initialState);
+    const [navBtnIsClicked, setNavBtnIsClicked] = useState(initialNavBtns);
     const [activeSetting, setActiveSetting] = useState(false);
-    const [themeMode, setThemeMode] = useState<"light" | "dark">(()=>{
-        if(typeof LSThemeMode === "string" && JSON.parse(LSThemeMode)){
+    const [themeMode, setThemeMode] = useState<"light" | "dark">(() => {
+        if (typeof LSThemeMode === "string" && JSON.parse(LSThemeMode)) {
             return JSON.parse(LSThemeMode);
         }
-        else{
+        else {
             return "light";
         }
     });
@@ -75,7 +76,11 @@ const MenusContextProvider = ({ children }: Props) => {
         }
     })
     const clickHandler = (item: KeyInitialValue) => {
-        setNavBtnIsClicked({ ...initialState, [item]: !navBtnIsClicked[item] });
+        setNavBtnIsClicked({ ...initialNavBtns, [item]: !navBtnIsClicked[item] });
+    };
+
+    const handleCloseNavBtns = () => {
+        setNavBtnIsClicked({ ...initialNavBtns });
     };
 
     return (
@@ -91,7 +96,8 @@ const MenusContextProvider = ({ children }: Props) => {
                 themeMode,
                 setThemeMode,
                 themeColors,
-                setThemeColors
+                setThemeColors,
+                handleCloseNavBtns
             }}
         >
             {children}
