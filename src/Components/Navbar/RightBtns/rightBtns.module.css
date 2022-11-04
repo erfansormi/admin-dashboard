@@ -5,6 +5,10 @@
     z-index: 999;
 }
 
+.content_container h4, .content_container h5{
+    font-size: 1rem;
+}
+
 .content {
     width: 340px;
     padding: 15px 25px;

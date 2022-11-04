@@ -34,7 +34,6 @@ const RightBtns = () => {
                     }
                 </div>
             )}
-
         </div>
     );
 };

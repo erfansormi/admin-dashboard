@@ -19,7 +19,7 @@
     -moz-border-radius: 50% !important;
     -ms-border-radius: 50% !important;
     -o-border-radius: 50% !important;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .menu_icon_btn {

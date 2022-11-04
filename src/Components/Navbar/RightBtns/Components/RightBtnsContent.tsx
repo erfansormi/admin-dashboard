@@ -23,7 +23,7 @@ const RightBtnsContent = ({ children, title }: Props) => {
         <div className={`${styles.content} shadow content-colors`}>
             <div className={styles.layout_container}>
                 <div className="align-center justify-between px-0">
-                    <h5>
+                    <h5 style={{ fontSize: "1.15rem" }}>
                         {title}
                     </h5>
                     <IconButton onClick={handleCloseNavBtns} color={"inherit"}>

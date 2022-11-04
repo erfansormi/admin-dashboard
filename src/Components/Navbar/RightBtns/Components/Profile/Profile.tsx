@@ -42,8 +42,7 @@ const Profile = () => {
                 {profileData.map((item, index) =>
                     <div
                         key={index * 43}
-                        style={{ cursor: "pointer" }}
-                        className={`hover-list align-center border-b ${styles.profile_list}`}
+                        className={`hover-list align-center border-b pointer ${styles.profile_list}`}
                     >
                         <div>
                             <Button
