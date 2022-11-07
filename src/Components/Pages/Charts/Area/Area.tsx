@@ -23,6 +23,7 @@ const Area = () => {
             <div className="shadow content-colors justify-center content-padding">
                 <ChartComponent
                     height="450px"
+                    background={themeMode === 'dark' ? '#333' : '#fff'}
                     className='justify-center w-100'
                     style={{ maxWidth: 1050 }}
                     tooltip={{ enable: true }}

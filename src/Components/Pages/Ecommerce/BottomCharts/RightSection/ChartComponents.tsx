@@ -34,7 +34,8 @@ const ChartComponents = () => {
                 labelStyle: { color: themeMode === "light" ? "#111" : "#fff" },
                 interval: 100,
             }}
-            legendSettings={{ background: 'white', position: "Top" }}
+            legendSettings={{ background: 'white', position: "Top", margin: { bottom: 10 } }}
+            background={themeMode === 'dark' ? '#333' : '#fff'}
         >
             <Inject services={[StackingColumnSeries, Category, Tooltip, Legend]} />
             <SeriesCollectionDirective>
