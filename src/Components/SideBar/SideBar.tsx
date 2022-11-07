@@ -39,6 +39,7 @@ const SideBar = () => {
                     onClick={(e) => toggleDrawer(e)}
                     onKeyDown={(e) => toggleDrawer(e)}
                     className={`shadow content-colors ${styles.aside_container}`}
+                    sx={{ borderRadius: 0 }}
                 >
                     <IconButton className={styles.close_menu_btn}>
                         <CancelOutlinedIcon />

@@ -10,6 +10,7 @@ import styles from "./Dashboard.module.css";
 import Setting from "./Setting";
 import SideBar from "../SideBar/SideBar";
 import NavbarBtns from "../Navbar/NavbarBtns";
+import Footer from "./Footer";
 import Ecommerce from "../Pages/Ecommerce/Ecommerce";
 import Order from "../Pages/Pages/Order/Order";
 import Employees from "../Pages/Pages/Employees/Employees";
@@ -55,6 +56,7 @@ const Dashboard = () => {
                         <Route path="/ecommerce" element={<Ecommerce />} />
                         <Route path="/" element={<Navigate to="/ecommerce" replace />} />
                     </Routes>
+                    <Footer />
                 </div>
             </Container>
         </>

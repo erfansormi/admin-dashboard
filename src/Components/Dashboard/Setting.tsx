@@ -74,7 +74,7 @@ const Setting = () => {
             >
                 <Box
                     className={`content-colors ${styles.setting_container}`}
-                    sx={{ width: 300, height: "100%" }}
+                    sx={{ width: 300, height: "100%", borderRadius: 0 }}
                     role="presentation"
                     onKeyDown={toggleDrawer(false)}
                     onClick={toggleDrawer(false)}

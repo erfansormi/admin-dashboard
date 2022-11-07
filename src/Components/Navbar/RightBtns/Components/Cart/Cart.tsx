@@ -17,8 +17,8 @@ import RightBtnsContent from '../RightBtnsContent';
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 const Cart = () => {
-  const { navBtnIsClicked, handleCloseNavBtns,themeColors } = useContext(MenusContext);
-  
+  const { navBtnIsClicked, handleCloseNavBtns, themeColors } = useContext(MenusContext);
+
   const toggleDrawer = (anchor: Anchor, open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
@@ -39,7 +39,7 @@ const Cart = () => {
         open={navBtnIsClicked.cart}
         onClose={toggleDrawer("right", false)}
       >
-        <RightBtnsContent title='shopping cart' style={{ width: 350,height:"100%" }}>
+        <RightBtnsContent title='shopping cart' style={{ width: 350, height: "100%", borderRadius: 0 }}>
           {CartData.map((item, index) =>
             <div key={index * 36} className="align-center border-b">
               <div style={{ marginRight: 15 }}>
@@ -78,7 +78,7 @@ const Cart = () => {
             </div>
           </div>
           <div>
-            <Button variant="contained" color={themeColors.name} sx={{width:"100%"}} size="large">
+            <Button variant="contained" color={themeColors.name} sx={{ width: "100%" }} size="large">
               place to orders
             </Button>
           </div>
