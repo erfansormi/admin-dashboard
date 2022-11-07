@@ -22,6 +22,7 @@ import Line from "../Pages/Charts/Line/Line";
 import Area from "../Pages/Charts/Area/Area";
 import Bar from "../Pages/Charts/Bar/Bar";
 import Pie from "../Pages/Charts/Pie/Pie";
+import Financial from "../Pages/Charts/Financial/Financial";
 
 const Dashboard = () => {
     return (
@@ -39,6 +40,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ padding: 40 }}>
                     <Routes>
+                        <Route path="/financial" element={<Financial />} />
                         <Route path='/pie' element={<Pie />} />
                         <Route path='/bar' element={<Bar />} />
                         <Route path='/area' element={<Area />} />
