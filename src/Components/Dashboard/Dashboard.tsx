@@ -26,6 +26,7 @@ import Pie from "../Pages/Charts/Pie/Pie";
 import Financial from "../Pages/Charts/Financial/Financial";
 import ColorMapping from "../Pages/Charts/ColorMapping/ColorMapping";
 import Pyramid from "../Pages/Charts/Pyramid/Pyramid";
+import Stacked from "../Pages/Charts/Stacked/Stacked";
 
 const Dashboard = () => {
     return (
@@ -43,6 +44,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ padding: 40 }}>
                     <Routes>
+                        <Route path="/stacked" element={<Stacked />} />
                         <Route path="/pyramid" element={<Pyramid />} />
                         <Route path="/color-mapping" element={<ColorMapping />} />
                         <Route path="/financial" element={<Financial />} />

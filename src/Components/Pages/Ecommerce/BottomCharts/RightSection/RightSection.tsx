@@ -7,14 +7,14 @@ import { MenusContext } from "../../../../../Context/MenusContextProvider"
 import styles from "../EcommerceRevenue.module.css"
 
 // components
-import ChartComponents from './ChartComponents'
+import ExpenseChart from './ChartComponents'
 
 const RightSection = () => {
     const { themeColors } = useContext(MenusContext);
 
     return (
         <div className={`col-5 content-colors text-capitalize shadow ${styles.data_box_2}`}>
-            <ChartComponents />
+            <ExpenseChart />
         </div>
     )
 }

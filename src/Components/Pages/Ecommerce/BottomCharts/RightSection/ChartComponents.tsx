@@ -17,7 +17,11 @@ import {
 // data
 import { budget, expense } from "./ChartData";
 
-const ChartComponents = () => {
+interface Props {
+    height?: string
+}
+
+const ExpenseChart = ({ height }: Props) => {
     const { themeMode } = useContext(MenusContext);
 
     return (
@@ -29,7 +33,7 @@ const ChartComponents = () => {
                 }
             }}
             tooltip={{ enable: true }}
-            height="320px"
+            height={height ? height : "320px"}
             primaryYAxis={{
                 labelStyle: { color: themeMode === "light" ? "#111" : "#fff" },
                 interval: 100,
@@ -58,4 +62,4 @@ const ChartComponents = () => {
         </ChartComponent >
     );
 };
-export default ChartComponents;
+export default ExpenseChart;
