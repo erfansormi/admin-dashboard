@@ -24,6 +24,7 @@ import Area from "../Pages/Charts/Area/Area";
 import Bar from "../Pages/Charts/Bar/Bar";
 import Pie from "../Pages/Charts/Pie/Pie";
 import Financial from "../Pages/Charts/Financial/Financial";
+import ColorMapping from "../Pages/Charts/ColorMapping/ColorMapping";
 
 const Dashboard = () => {
     return (
@@ -41,6 +42,7 @@ const Dashboard = () => {
             <Container maxWidth="xl" className={`${styles.container}`}>
                 <div style={{ padding: 40 }}>
                     <Routes>
+                        <Route path="/color-mapping" element={<ColorMapping />} />
                         <Route path="/financial" element={<Financial />} />
                         <Route path='/pie' element={<Pie />} />
                         <Route path='/bar' element={<Bar />} />

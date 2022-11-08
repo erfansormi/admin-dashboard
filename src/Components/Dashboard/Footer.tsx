@@ -1,8 +1,6 @@
-import { useContext } from 'react'
-
 const Footer = () => {
     return (
-        <footer className='content-colors justify-center py-3' style={{ backgroundColor: "inherit" }}>
+        <footer className='content-colors justify-center py-3 mt-5' style={{ backgroundColor: "inherit" }}>
             <div className='mx-3'>
                 © 2022 All rights reserved
             </div>
