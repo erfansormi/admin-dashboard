@@ -19,7 +19,7 @@ const Kanban = () => {
                     position: "absolute",
                     left: "30px",
                     right: "30px",
-                    top: "40px",
+                    top: "45px",
                 }}
             >
                 <TitlePage category='app' title='kanban' style={{ margin: "0 15px 30px" }} />

@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { MenusContext } from "../../../../../Context/MenusContextProvider";
+
 //chart
 import {
     SparklineComponent,
@@ -6,6 +9,8 @@ import {
 } from "@syncfusion/ej2-react-charts";
 
 const SparkLineComponents = () => {
+    const { themeColors } = useContext(MenusContext);
+
     return (
         <SparklineComponent
             border={{ width: 2 }}
@@ -29,6 +34,7 @@ const SparkLineComponents = () => {
             xName="xval"
             yName="yval"
             type="Line"
+            fill={themeColors.hex}
         >
             <Inject services={[SparklineTooltip]} />
         </SparklineComponent>

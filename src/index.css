@@ -1,30 +1,18 @@
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-react-kanban/styles/material.css";
 
 :root {
-    /* mui */
-    --nutral-color-1: #c5c5c5;
-    --nutral-color-2: #aaa;
+    /* mui colors */
     --success-color: #32ff7e;
     --warning-color: #fed330;
     --error-color-1: #ff4757;
     --error-color-2: #ff3838;
-    
-    /* colors */
-    --neutral:#999;
-    --light-hover-list:#f6f6f6;
-    --dark-hover-list:#393939;
-    --light-color-1: #f5f5f5;
-    --light-red: #fa9085;
-    --orange-500: #ffa502;
-    --icon-color: rgba(0, 0, 0, 0.54);
-    --light-cyan: #dff9fb;
     --cyan-500: #48dbfb;
     --dark-blue-500: rgb(69, 97, 189);
     --dark-blue-700: rgb(44, 77, 184);
@@ -33,28 +21,44 @@
     --green-400: #51d36d;
     --green-300: #78e08f;
     --light-green: #d6ffb8;
+    --light-red: #fa9085;
+    --orange-500: #ffa502;
+
+    /* other colors */
+    --nutral-color-1: #c5c5c5;
+    --nutral-color-2: #aaa;
+    --neutral: #999;
+    --light-body-bg: #f5f5f5;
+    --dark-body-bg: #222;
+    --icon-color: rgba(0, 0, 0, 0.54);
+    --light-cyan: #dff9fb;
     --dark-1: #333;
+
+    /* layout colors */
+    --dark-content-bg: #333;
+    --dark-content-color: #f5f5f5;
+    --light-content-bg: #fff;
+    --light-content-color: #111;
+    --sub-light-content-bg: #eee;
+    --sub-dark-content-bg: #444;
+    --light-hover-list: #f6f6f6;
+    --dark-hover-list: #393939;
 
     /* other */
     --light-shadow: 0 0 14px #ccc;
     --dark-shadow: 0 0 14px rgba(0, 0, 0, 20%);
     --content-padding: 60px 0;
+    --radius:6px;
+    --light-border:1px solid #eee;
+    --dark-border:1px solid #444;
 }
 
-.offcanvas-backdrop {
-    display: none;
+* {
+    margin: 0;
 }
 
 button {
     font-weight: 500 !important;
-    text-transform: capitalize;
-    background-color: transparent;
-    transition: 0.5s background ease-in;
-    -webkit-transition: 0.5s background ease-in;
-    -moz-transition: 0.5s background ease-in;
-    -ms-transition: 0.5s background ease-in;
-    -o-transition: 0.5s background ease-in;
-    border: none;
     text-transform: capitalize !important;
 }
 
@@ -63,25 +67,9 @@ a {
     color: inherit;
 }
 
-* {
-    margin: 0;
-}
-
-th, td {
+th,
+td {
     color: inherit !important;
-}
-
-#js-licensing {
-    display: none;
-}
-
-#loader {
-    color: #008cff;
-    height: 40px;
-    left: 45%;
-    position: absolute;
-    top: 45%;
-    width: 30%;
 }
 
 .status-user {
@@ -132,54 +120,6 @@ th, td {
     align-items: center;
 }
 
-.pointer{
+.pointer {
     cursor: pointer;
-}
-
-.triple-dot{
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.rdw-option-wrapper {
-    padding: 8px !important;
-    border-radius: 4px !important;
-    transition: 0.2s all;
-    height: auto !important;
-    -webkit-border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -ms-border-radius: 4px !important;
-    -o-border-radius: 4px !important;
-}
-
-.rdw-option-wrapper:hover {
-    background-color: rgba(0, 0, 0, 0.04);
-    border-radius: 50%;
-}
-
-.rdw-option-active {
-    background: #eee !important;
-}
-
-.rdw-image-modal, .rdw-emoji-modal, .rdw-embedded-modal, .rdw-link-modal, .rdw-colorpicker-modal {
-    right: 5px !important;
-    left: unset !important;
-    height: auto !important;
-}
-
-.rdw-emoji-modal, .rdw-colorpicker-modal {
-    height: 230px !important;
-}
-
-.MuiTablePagination-root * {
-    color: inherit;
-}
-
-.e-kanban {
-    background: inherit;
-}
-
-.css-mqzbzh>div:first-child * {
-    color: inherit;
 }

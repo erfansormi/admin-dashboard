@@ -54,7 +54,7 @@ const SideBar = () => {
                                     {item.link.map(item =>
                                         <Link
                                             key={item.id}
-                                            className={`${styles.link} sidebar-link ${window.location.pathname.split("/")[1] === item.name ? styles.active_li : ""}`}
+                                            className={`${styles.link} sidebar-link hover-list ${window.location.pathname.split("/")[1] === item.name ? styles.active_li : ""}`}
                                             style={{
                                                 backgroundColor: window.location.pathname.split("/")[1] === item.name ?
                                                     themeColors.hex : undefined

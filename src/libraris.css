@@ -1,0 +1,69 @@
+#js-licensing {
+    display: none;
+}
+
+#loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.offcanvas-backdrop {
+    display: none;
+}
+
+.triple-dot {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.rdw-option-wrapper {
+    padding: 8px !important;
+    border-radius: 4px !important;
+    transition: 0.2s all;
+    height: auto !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+}
+
+.rdw-option-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+}
+
+.rdw-option-active {
+    background: #eee !important;
+}
+
+.rdw-image-modal,
+.rdw-emoji-modal,
+.rdw-embedded-modal,
+.rdw-link-modal,
+.rdw-colorpicker-modal {
+    right: 5px !important;
+    left: unset !important;
+    height: auto !important;
+}
+
+.rdw-emoji-modal,
+.rdw-colorpicker-modal {
+    height: 230px !important;
+}
+
+.MuiTablePagination-root * {
+    color: inherit;
+}
+
+.e-kanban {
+    background: inherit !important;
+}
+
+.css-mqzbzh>div:first-child * {
+    color: inherit;
+}
