@@ -5,7 +5,7 @@ const Footer = () => {
                 © 2022 All rights reserved
             </div>
             <div className='mx-3'>
-                website creted by <a style={{ textDecoration: "underline" }} href="https://erfansormi.netlify.app" target={"_blank"}>erfan sormi</a>
+                website creted by <a style={{ textDecoration: "underline" }} href="https://erfansormi.vercel.app" target={"_blank"}>erfan sormi</a>
             </div>
         </footer>
     )
