@@ -41,29 +41,27 @@ const Dashboard = () => {
             <Setting />
 
             {/* center content */}
-            <Container maxWidth="xl" className={`${styles.container}`}>
-                <div style={{ padding: 40 }}>
-                    <Routes>
-                        <Route path="/stacked" element={<Stacked />} />
-                        <Route path="/pyramid" element={<Pyramid />} />
-                        <Route path="/color-mapping" element={<ColorMapping />} />
-                        <Route path="/financial" element={<Financial />} />
-                        <Route path='/pie' element={<Pie />} />
-                        <Route path='/bar' element={<Bar />} />
-                        <Route path='/area' element={<Area />} />
-                        <Route path='/line' element={<Line />} />
-                        <Route path='/color-picker' element={<ColorPicker />} />
-                        <Route path='/editor' element={<TextEditor />} />
-                        <Route path='/kanban' element={<Kanban />} />
-                        <Route path='/calendar' element={<Calendar />} />
-                        <Route path='/customers' element={<Customers />} />
-                        <Route path="/employees" element={<Employees />} />
-                        <Route path="/orders" element={<Order />} />
-                        <Route path="/ecommerce" element={<Ecommerce />} />
-                        <Route path="/" element={<Navigate to="/ecommerce" replace />} />
-                    </Routes>
-                    <Footer />
-                </div>
+            <Container maxWidth="lg" className={`${styles.container}`}>
+                <Routes>
+                    <Route path="/" element={<Navigate to="/ecommerce" replace />} />
+                    <Route path="/ecommerce" element={<Ecommerce />} />
+                    <Route path="/orders" element={<Order />} />
+                    <Route path="/employees" element={<Employees />} />
+                    <Route path='/customers' element={<Customers />} />
+                    <Route path='/calendar' element={<Calendar />} />
+                    <Route path='/kanban' element={<Kanban />} />
+                    <Route path='/editor' element={<TextEditor />} />
+                    <Route path='/color-picker' element={<ColorPicker />} />
+                    <Route path='/line' element={<Line />} />
+                    <Route path='/area' element={<Area />} />
+                    <Route path='/bar' element={<Bar />} />
+                    <Route path='/pie' element={<Pie />} />
+                    <Route path="/financial" element={<Financial />} />
+                    <Route path="/color-mapping" element={<ColorMapping />} />
+                    <Route path="/pyramid" element={<Pyramid />} />
+                    <Route path="/stacked" element={<Stacked />} />
+                </Routes>
+                <Footer />
             </Container>
         </>
     );

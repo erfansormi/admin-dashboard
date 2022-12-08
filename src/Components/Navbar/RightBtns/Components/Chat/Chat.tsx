@@ -9,6 +9,9 @@ import { ChatData } from './ChatData';
 // mui
 import { Avatar, Button } from '@mui/material';
 
+// css
+import styles from "./chat.module.css";
+
 // components
 import RightBtnsContent from '../RightBtnsContent';
 
@@ -20,14 +23,13 @@ const Chat = () => {
       {ChatData.map((item, index) =>
         <div
           key={index * 10}
-          className={`border-b hover-list pointer`}
-          style={{ flexDirection: "column" }}
+          className={`border-b hover-list pointer d-flex flex-column p-2`}
         >
           <div className='align-center'>
             <div style={{ marginRight: 15 }}>
               <Avatar alt={item.name} src={item.img} />
             </div>
-            <div className="d-flex" style={{ flexDirection: "column" }}>
+            <div className={`w-100 overflow-hidden d-flex flex-column`}>
               <div className="justify-between">
                 <div>
                   <h4>
@@ -38,11 +40,7 @@ const Chat = () => {
                   {item.time}
                 </div>
               </div>
-              <p className="neutral-color triple-dot" style={{
-                fontSize: "0.9rem",
-                textTransform: "initial",
-                width: 210
-              }}>
+              <p className={`${styles.text} neutral-color triple-dot`}>
                 {item.message}
               </p>
             </div>

@@ -43,10 +43,10 @@ const Cart = () => {
       >
         <RightBtnsContent
           title="shopping cart"
-          style={{ width: 350, height: "100%", borderRadius: 0 }}
+          style={{ width: window.innerWidth > 600 ? 350 : "90vw", height: "100%", borderRadius: 0 }}
         >
           {CartData.map((item, index) => (
-            <div key={index * 36} className="align-center border-b">
+            <div key={index * 36} className="align-center border-b py-2">
               <div style={{ marginRight: 15 }}>
                 <img
                   src={item.img}
@@ -61,7 +61,7 @@ const Cart = () => {
                 <div className="neutral-color" style={{ marginBottom: 8 }}>
                   {item.category}
                 </div>
-                <div className="align-center">
+                <div className="align-center" style={{ flexWrap: "wrap" }}>
                   <div style={{ marginRight: 5, fontWeight: 600 }}>
                     ${item.price}
                   </div>
@@ -79,7 +79,7 @@ const Cart = () => {
               </div>
             </div>
           ))}
-          <div className="justify-between fw-bold">
+          <div className="justify-between fw-bold py-2">
             <div>total price</div>
             <div>$890</div>
           </div>

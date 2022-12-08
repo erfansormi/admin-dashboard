@@ -18,7 +18,7 @@ const RightBtns = () => {
     return (
         <div className="d-flex">
             {NavbarBtnsData.map((item) =>
-                <div className="position-relative">
+                <div className={styles.container}>
                     <IconButton
                         key={item.id}
                         onClick={() => clickHandler(item.link)}

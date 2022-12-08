@@ -18,17 +18,17 @@ const Notification = () => {
   return (
     <RightBtnsContent title="notifications">
       {NotifData.map((item, index) =>
-        <div key={index * 47} className={`align-center border-b hover-list pointer`}>
+        <div key={index * 47} className={`align-center border-b hover-list pointer p-2`}>
           <div style={{ marginRight: 15 }}>
             <Avatar src={item.img} alt="notification" />
           </div>
           <div>
-            <div>
+            <div style={{ height: "22px", overflow: "hidden" }}>
               <h5>
                 {item.title}
               </h5>
             </div>
-            <div className='neutral-color' style={{ fontSize: "0.9 rem" }}>
+            <div className='neutral-color' style={{ fontSize: "0.9 rem", height: "22px", overflow: "hidden" }}>
               {item.des}
             </div>
           </div>

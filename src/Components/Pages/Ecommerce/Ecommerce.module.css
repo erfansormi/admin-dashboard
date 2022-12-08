@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 
-.container .img_container::before{
+.container .img_container::before {
     content: "";
     background: no-repeat center center/cover;
     background-image: url("../../../assets/img/earnings.jpg");
@@ -33,7 +33,7 @@
     bottom: 0;
 }
 
-.container .img_container>div{
+.container .img_container>div {
     z-index: 10;
 }
 
@@ -47,6 +47,26 @@
     font-size: 20px;
 }
 
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+@media (min-width:600px) {
+    .grid_container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (min-width:950px) {
+    .grid_container {
+        grid-template-columns: repeat(4, 200px);
+        justify-content: center;
+    }
+}
+
 .ecommerce_data_box {
     display: flex;
     flex-direction: column;
@@ -58,7 +78,6 @@
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    margin: 0 8px !important;
 }
 
 .digits {

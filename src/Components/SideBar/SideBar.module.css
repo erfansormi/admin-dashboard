@@ -6,6 +6,12 @@
     min-width: 290px;
 }
 
+@media (max-width:600px) {
+    .aside_container {
+        min-width: 90vw;
+    }
+}
+
 .title_container {
     margin-bottom: 26px;
 }

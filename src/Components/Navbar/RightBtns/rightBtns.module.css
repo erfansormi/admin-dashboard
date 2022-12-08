@@ -1,17 +1,24 @@
+@media (min-width:600px) {
+    .container {
+        position: relative;
+    }
+}
+
 .content_container {
     position: absolute;
     top: 45px;
-    right: 15px;
+    left: 20vw;
     z-index: 999;
 }
 
-.content_container h4, .content_container h5{
+.content_container h4,
+.content_container h5 {
     font-size: 1rem;
 }
 
 .content {
-    width: 340px;
-    padding: 15px 25px;
+    width: 75vw;
+    padding: 12px;
     text-transform: capitalize;
 }
 
@@ -20,6 +27,21 @@
     flex-direction: column;
 }
 
-.layout_container>div {
-    padding: 15px;
+@media (min-width:600px) {
+    .content_container {
+        position: absolute;
+        top: 45px;
+        right: 15px;
+        z-index: 999;
+        left: unset;
+    }
+
+    .content {
+        width: 340px;
+        padding: 15px 25px;
+    }
+
+    .layout_container>div {
+        padding: 15px;
+    }
 }

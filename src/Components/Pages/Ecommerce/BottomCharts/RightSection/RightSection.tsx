@@ -13,7 +13,7 @@ const RightSection = () => {
     const { themeColors } = useContext(MenusContext);
 
     return (
-        <div className={`col-5 content-colors text-capitalize shadow ${styles.data_box_2}`}>
+        <div className={`content-colors text-capitalize shadow ${styles.data_box_2}`}>
             <ExpenseChart />
         </div>
     )

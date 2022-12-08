@@ -17,12 +17,12 @@ const Kanban = () => {
                     padding: "20px 0 0",
                     borderRadius: 6,
                     position: "absolute",
-                    left: "30px",
-                    right: "30px",
+                    left: "20px",
+                    right: "20px",
                     top: "45px",
                 }}
             >
-                <TitlePage category='app' title='kanban' style={{ margin: "0 15px 30px" }} />
+                <TitlePage category='app' title='kanban' />
                 <KanbanComponent
                     id="kanban"
                     keyField="Status"

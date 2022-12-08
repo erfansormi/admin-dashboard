@@ -16,13 +16,13 @@ const LeftSection = () => {
     const { themeColors } = useContext(MenusContext);
 
     return (
-        <div className={`col-4 text-capitalize content-colors shadow ${styles.data_box_1}`}>
-            <div>
-                <h6>
+        <div className={`text-capitalize content-colors shadow ${styles.data_box_1}`}>
+            <div className="mb-3">
+                <h6 className="text-center">
                     revenue updates
                 </h6>
             </div>
-            <div>
+            <div className="d-flex flex-column align-items-center">
                 <div className={`mb-4`}>
                     <h5>${Number(93451).toLocaleString()}
                         <span

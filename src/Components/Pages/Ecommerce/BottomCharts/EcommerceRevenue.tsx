@@ -8,7 +8,7 @@ import RightSection from './RightSection/RightSection'
 const EcommerceRevenue = () => {
     return (
         <>
-            <div className={`row justify-content-center`}>
+            <div className={styles.container}>
 
                 {/* box 1 */}
                 <LeftSection />
